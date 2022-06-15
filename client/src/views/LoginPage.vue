@@ -1,32 +1,30 @@
 <template>
   <div class="loginbox">
-    <h1> Login Here </h1>
+    <h1>Login Here</h1>
     <form class="login_form">
       <p>UserName</p>
-      <input type="text" name="" placeholder="Enter UserName">
+      <input type="text" name="" placeholder="Enter UserName" />
       <p>Password</p>
-      <input type="password" name="" placeholder="Enter Password">
-      <input type="submit" name="" value="Login">
-      <a href="#">Lost your password?</a><br>
+      <input type="password" name="" placeholder="Enter Password" />
+      <input type="submit" name="" value="Login" />
+      <a href="#">Lost your password?</a><br />
       <p class="message">Don't have an account?<a href="#"> Register</a></p>
     </form>
 
     <form class="register_form">
       <p>UserName</p>
-      <input type="text" name="" placeholder="Enter UserName">
+      <input type="text" name="" placeholder="Enter UserName" />
       <p>Email</p>
-      <input type="email" name="" placeholder="Enter E-mail">
+      <input type="email" name="" placeholder="Enter E-mail" />
       <p>Password</p>
-      <input type="password" name="" placeholder="Enter Password">
-      <input type="submit" name="" value="Register">
+      <input type="password" name="" placeholder="Enter Password" />
+      <input type="submit" name="" value="Register" />
       <p class="message">Already have an account?<a href="#">Login</a></p>
     </form>
   </div>
 </template>
 
-<script>
-
-</script>
+<script></script>
 
 <style scoped>
 .loginbox {
@@ -60,9 +58,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.loginbox input[type="text"],
-input[type="password"],
-input[type="email"] {
+.loginbox input[type='text'],
+input[type='password'],
+input[type='email'] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -72,7 +70,7 @@ input[type="email"] {
   font-size: 16px;
 }
 
-.loginbox input[type="submit"] {
+.loginbox input[type='submit'] {
   border: none;
   outline: none;
   height: 40px;
@@ -82,7 +80,7 @@ input[type="email"] {
   border-radius: 20px;
 }
 
-.loginbox input[type="submit"]:hover {
+.loginbox input[type='submit']:hover {
   cursor: pointer;
   background: #ffc107;
   color: #000;
