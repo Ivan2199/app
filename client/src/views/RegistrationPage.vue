@@ -15,25 +15,24 @@
 </template>
 
 <script>
-import AuthenticationServices from "@/services/AuthenticationServices";
+import AuthenticationServices from '@/services/AuthenticationServices'
 export default {
   data() {
     return {
-      email: "",
-      password: "",
-    };
+      email: '',
+      password: ''
+    }
   },
   methods: {
     async register() {
       const response = await AuthenticationServices.register({
         email: this.email,
-        password: this.password,
-      });
-      console.log(response.data);
-    },
-  },
-};
+        password: this.password
+      })
+      console.log(response.data)
+    }
+  }
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

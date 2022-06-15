@@ -37,10 +37,10 @@
 
 <script>
 export default {
-  name: "HomeView",
-};
+  name: 'HomeView'
+}
 </script>
 
 <style scoped>
-@import "../assets/HomeViewStyle.css";
+@import '../assets/HomeViewStyle.css';
 </style>
