@@ -4,7 +4,7 @@ module.exports = {
     register (req, res, next) {
         const schema = Joi.object({
         email: Joi.string() .min(6) .required() .email(),
-        password: Joi.string() .min(6) .required() .regex(
+        password: Joi.string() .min(8) .required() .regex(
             new RegExp('^[a-zA-Z0-9]{8,32}$')
         )
     });
