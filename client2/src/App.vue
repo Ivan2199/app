@@ -1,50 +1,53 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <router-view />
-    </v-main>
-  </v-app>
+  <div class="bg-con">
+    <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <h2 class="navbar-brand">Driving Education</h2>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <router-link class="nav-link active" :to="{ name: 'home' }"
+                  >Home</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :to="{ name: 'about' }"
+                  >About</router-link
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-primary" type="submit">
+                <router-link class="nav-link" :to="{ name: 'login' }"
+                  >Login</router-link
+                >
+              </button>
+              <button class="btn btn-outline-primary" type="submit">
+                <router-link class="nav-link" :to="{ name: 'registration' }"
+                  >Register</router-link
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  })
-}
-</script>
+<style scoped>
+@import './assets/AppPageStyle.css';
+</style>
