@@ -1,9 +1,10 @@
 const Promise = require('bluebird')
+const { isSchema } = require('joi')
 const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
+// const bcrypt = require('bcrypt')
 
 function hashPassword (user, options) {
   const SALT_FACTOR = 8
-
   if (!user.changed('password')) {
     return
   }
