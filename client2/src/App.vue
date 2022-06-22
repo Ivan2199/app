@@ -28,7 +28,7 @@
                 >
               </li>
             </ul>
-            <form class="d-flex">
+            <form v-if="!$store.state.isUserLoggedIn" class="d-flex">
               <button class="btn btn-primary" type="submit">
                 <router-link class="nav-link" :to="{ name: 'login' }"
                   >Login</router-link
@@ -47,6 +47,9 @@
     </div>
   </div>
 </template>
+
+<script></script>
+
 <style scoped>
 @import './assets/AppPageStyle.css';
 </style>
