@@ -1,12 +1,12 @@
-const { User } = require("../models/user");
-const jwt = require('jsonwebtoken')
-const config = require('../config/config')
+const { User } = require("../models");
+const jwt = require("jsonwebtoken");
+const config = require("../config/config");
 
-function jwtSignUser (user) {
-  const ONE_WEEK = 60 * 60 * 24 * 7
+function jwtSignUser(user) {
+  const ONE_WEEK = 60 * 60 * 24 * 7;
   return jwt.sign(user, config.authentication.jwtSecret, {
-    expiresIn: ONE_WEEK
-  })
+    expiresIn: ONE_WEEK,
+  });
 }
 
 module.exports = {
@@ -38,36 +38,38 @@ module.exports = {
         .send({ error: `An error occured while saving the user ${email}` });
     }
   },
-  async login (req, res) {
-    try{
-      const {email, password} = req.body;
+  async login(req, res) {
+    try {
+      const { email, password } = req.body;
 
       const user = await User.findOne({
         where: {
-          email: email
-        }
-      })
-      if(!user) {
-        return res.status(403).send({
-          error: 'The login information is incorrect'
-        })
-      }
-      const isPasswordValid = await user.comparePassword(password)
-      if(!isPasswordValid){
-        return res.status(403).send({
-          error: 'The login information is incorrect'
-        })
+          email: email,
+        },
+      });
+
+      if (!user) {
+        return res.status(404).send({
+          error: "User does not exist",
+        });
       }
 
-      const userJson = user.toJSON()
+      const isPasswordValid = await user.comparePassword(password);
+      if (!isPasswordValid) {
+        return res.status(403).send({
+          error: "The login information is incorrect",
+        });
+      }
+
+      const userJson = user.toJSON();
       res.send({
         user: userJson,
-        token: jwtSignUser(userJson)
-      })
+        token: jwtSignUser(userJson),
+      });
     } catch (err) {
       res.status(500).send({
-        error: 'Invalid login information!'
-      })
+        error: "Invalid login information!",
+      });
     }
-  }
+  },
 };
