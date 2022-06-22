@@ -47,7 +47,6 @@
     </div>
   </div>
 </template>
-
 <style scoped>
 @import './assets/AppPageStyle.css';
 </style>
