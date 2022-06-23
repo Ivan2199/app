@@ -30,8 +30,9 @@ color: #191010;
 .Car{
     height: 130px;
     width: 130px;
-    position: relative;
+    position:static;
     top: 140px;
     left:-20%;
     z-index: 10;
+
 }

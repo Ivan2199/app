@@ -28,16 +28,32 @@
                 >
               </li>
             </ul>
-            <form v-if="!$store.state.isUserLoggedIn" class="d-flex">
-              <button class="btn btn-primary" type="submit">
+            <form class="d-flex">
+              <button
+                v-if="!$store.state.isUserLoggedIn"
+                class="btn btn-primary"
+                type="submit"
+              >
                 <router-link class="nav-link" :to="{ name: 'login' }"
                   >Login</router-link
                 >
               </button>
-              <button class="btn btn-outline-primary" type="submit">
+              <button
+                v-if="!$store.state.isUserLoggedIn"
+                class="btn btn-outline-primary"
+                type="submit"
+              >
                 <router-link class="nav-link" :to="{ name: 'registration' }"
                   >Register</router-link
                 >
+              </button>
+              <button
+                v-if="$store.state.isUserLoggedIn"
+                class="btn btn-outline-primary"
+                type="submit"
+                @click="logout"
+              >
+                Log Out
               </button>
             </form>
           </div>
@@ -48,7 +64,19 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    logout() {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({
+        name: 'home'
+      })
+    }
+  }
+}
+</script>
 
 <style scoped>
 @import './assets/AppPageStyle.css';
