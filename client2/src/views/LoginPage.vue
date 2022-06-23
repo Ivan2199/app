@@ -1,18 +1,40 @@
 <template>
-  <div>
-    <h1>Login</h1>
-    <input type="email" name="email" v-model="email" placeholder="email" />
-    <br />
-    <input
-      type="password"
-      name="password"
-      v-model="password"
-      placeholder="password"
-    />
-    <br />
-    <div class="error" v-html="error"></div>
-    <button @click="login">Login</button>
-  </div>
+  <v-app id="inspire">
+    <div>
+      <v-content>
+        <v-container fluid fill-height>
+          <v-layout align-center justify-center>
+            <v-flex xs12 sm8 md4>
+              <v-card class="elevation-12">
+                <v-toolbar dark color="primary">
+                  <v-toolbar-title>Login</v-toolbar-title>
+                </v-toolbar>
+                <v-card-text>
+                  <form name="tab-tracker-form" autocomplete="off">
+                    <v-text-field label="Email" v-model="email"></v-text-field>
+                    <br />
+                    <v-text-field
+                      label="Password"
+                      type="password"
+                      v-model="password"
+                      autocomplete="new-password"
+                    ></v-text-field>
+                  </form>
+                  <br />
+                  <div class="danger-alert" v-html="error" />
+                  <br />
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="primary" @click="login">Login</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-content>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -43,7 +65,15 @@ export default {
 </script>
 
 <style scoped>
-.error {
-  color: red;
+#inspire {
+  background: url(../assets/background_image.jpg);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  overflow: hidden;
 }
 </style>
