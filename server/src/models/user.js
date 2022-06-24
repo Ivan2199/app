@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const router = require("../routes/user");
 
 async function hashPassword(user, options) {
   const SALT_FACTOR = 8;
@@ -21,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
       },
       password: DataTypes.STRING,
+      name: DataTypes.STRING,
+      surname: DataTypes.STRING
     },
     {
       hooks: {

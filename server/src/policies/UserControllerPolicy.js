@@ -8,6 +8,8 @@ module.exports = {
         .min(8)
         .required()
         .regex(new RegExp("^[a-zA-Z0-9]{8,32}$")),
+      name: Joi.string().required(),
+      surname: Joi.string().required()
     });
 
     const { error, value } = schema.validate(req.body);
@@ -28,6 +30,15 @@ module.exports = {
                     `,
           });
           break;
+        case "name":
+          res.status(400).send({
+            error: 'you must provide us with name!'
+          });
+          break;
+        case "surname":
+          res.status(400).send({
+            error: 'you must provide us with surname!'
+          })
         default:
           res.status(400).send({
             error: "Invalid registration information",

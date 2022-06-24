@@ -12,7 +12,7 @@ function jwtSignUser(user) {
 module.exports = {
   async register(req, res) {
     try {
-      const { email, password } = req.body;
+      const { email, password, name, surname } = req.body;
 
       const existingUser = await User.findOne({ where: { email: email } });
       if (existingUser) {
@@ -24,6 +24,8 @@ module.exports = {
       const newUser = await User.create({
         email,
         password,
+        name, 
+        surname
       });
 
       const { email: userEmail } = newUser.toJSON();

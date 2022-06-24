@@ -26,7 +26,7 @@
       <span>o</span>
       <span>n</span>
     </div>
-    <p>
+    <p class="introduction">
       Aplikacija koja će ti pomoći proći vozački ispit. Na tebi je samo da
       izdvojiš vremena za učenje te rješavanje ispita, odnosno kvizova koji su
       ti ponuđeni. Za više informacija o aplikaciji posjetite About stranicu

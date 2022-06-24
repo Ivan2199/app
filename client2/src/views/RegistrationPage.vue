@@ -19,10 +19,22 @@
                       v-model="password"
                       autocomplete="new-password"
                     ></v-text-field>
+                    <br />
+                    <v-text-field
+                      label="Name"
+                      type="text"
+                      v-model="name"
+                    ></v-text-field>
+                    <br />
+                    <v-text-field
+                      label="Surname"
+                      type="text"
+                      v-model="surname"
+                    ></v-text-field>
+                    <br />
+                    <div class="danger-alert" v-html="error" />
+                    <br />
                   </form>
-                  <br />
-                  <div class="danger-alert" v-html="error" />
-                  <br />
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -38,12 +50,16 @@
 </template>
 
 <script>
+import router from '@/router'
 import AuthenticationServices from '@/services/AuthenticationServices'
 export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+      name: '',
+      surname: '',
+      error: null
     }
   },
   methods: {
@@ -51,7 +67,9 @@ export default {
       try {
         const response = await AuthenticationServices.register({
           email: this.email,
-          password: this.password
+          password: this.password,
+          name: this.name,
+          surname: this.surname
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
@@ -59,6 +77,9 @@ export default {
         this.error = error.response.data.error
       }
     }
+  },
+  setup() {
+    router.push('/client2/src/views/LoginPage.vue')
   }
 }
 </script>
