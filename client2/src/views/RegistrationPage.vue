@@ -50,7 +50,6 @@
 </template>
 
 <script>
-import router from '@/router'
 import AuthenticationServices from '@/services/AuthenticationServices'
 export default {
   data() {
@@ -73,27 +72,19 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'login'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }
     }
-  },
-  setup() {
-    router.push('/client2/src/views/LoginPage.vue')
   }
 }
 </script>
 
 <style scoped>
 #inspire {
-  background: url(../assets/background_image.jpg);
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  z-index: 0;
-  overflow: hidden;
+  background: url(../assets/BetterOne.jpg);
 }
 </style>

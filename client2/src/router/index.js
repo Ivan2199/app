@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
 import LoginPage from '../views/LoginPage.vue'
 import RegistrationPage from '../views/RegistrationPage.vue'
 import MainPage from '../views/MainPage.vue'
+import Theory from '../views/TheoryPage.vue'
+import PropisiuCestovnomPrometu from '../views/TheoryPageComponents/PropisiuCestovnomPrometu.vue'
+import CestaiNjenaObiljezja from '../views/TheoryPageComponents/CestaiNjenaObiljezja.vue'
+import PonasanjeSudionikauPrometu from '../views/TheoryPageComponents/PonasanjeSudionikauPrometu.vue'
+import ZnakoviuPrometu from '../views/TheoryPageComponents/ZnakoviuPrometu.vue'
+import OstaliSudioniciuCestovnomPrometu from '../views/TheoryPageComponents/OstaliSudioniciuCestovnomPrometu.vue'
 
 Vue.use(VueRouter)
 
@@ -16,11 +23,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: AboutView
   },
   {
     path: '/login',
@@ -36,6 +39,36 @@ const routes = [
     path: '/mainpage',
     name: 'mainpage',
     component: MainPage
+  },
+  {
+    path: '/theory',
+    name: 'theory',
+    component: Theory
+  },
+  {
+    path: '/PropisiuCestovnomPrometu',
+    name: 'PropisiuCestovnomPrometu',
+    component: PropisiuCestovnomPrometu
+  },
+  {
+    path: '/CestaiNjenaObiljezja',
+    name: 'CestaiNjenaObiljezja',
+    component: CestaiNjenaObiljezja
+  },
+  {
+    path: 'PonasanjeSudionikauPrometu',
+    name: 'PonasanjeSudionikauPrometu',
+    component: PonasanjeSudionikauPrometu
+  },
+  {
+    path: 'ZnakoviuPrometu',
+    name: 'ZnakoviuPrometu',
+    component: ZnakoviuPrometu
+  },
+  {
+    path: 'OstaliSudioniciuCestovnomPrometu',
+    name: 'OstaliSudioniciuCestovnomPrometu',
+    component: OstaliSudioniciuCestovnomPrometu
   }
 ]
 

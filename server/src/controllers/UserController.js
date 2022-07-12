@@ -2,6 +2,8 @@ const { User } = require("../models");
 const jwt = require("jsonwebtoken");
 const config = require("../config/config");
 
+const { serializeUser } = require("../schemas/user");
+
 function jwtSignUser(user) {
   const ONE_WEEK = 60 * 60 * 24 * 7;
   return jwt.sign(user, config.authentication.jwtSecret, {
@@ -24,15 +26,12 @@ module.exports = {
       const newUser = await User.create({
         email,
         password,
-        name, 
-        surname
+        name,
+        surname,
       });
+      console.log(newUser.toJSON());
 
-      const { email: userEmail } = newUser.toJSON();
-
-      return res.send({
-        user: { userEmail },
-      });
+      return res.send(serializeUser(newUser));
     } catch (err) {
       console.log(err);
       return res

@@ -1,5 +1,4 @@
 const bcrypt = require("bcrypt");
-const router = require("../routes/user");
 
 async function hashPassword(user, options) {
   const SALT_FACTOR = 8;
@@ -17,18 +16,24 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
     {
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
       email: {
         type: DataTypes.STRING,
         unique: true,
       },
       password: DataTypes.STRING,
       name: DataTypes.STRING,
-      surname: DataTypes.STRING
+      surname: DataTypes.STRING,
     },
     {
       hooks: {
         beforeSave: hashPassword,
       },
+      freezeTableName: true,
     }
   );
 
@@ -37,7 +42,10 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   User.associate = function (models) {
-  }
+    User.hasMany(models.QuizResult, {
+      foreignKey: "userId",
+    });
+  };
 
-  return User
-}
+  return User;
+};

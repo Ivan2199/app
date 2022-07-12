@@ -1,0 +1,5 @@
+-- SQLite
+-- INSERT INTO question (id, questionText, hasManyAnswers, createdAt, updatedAt)
+-- VALUES (1, "Što je kolnik?", false, CURRENT_DATE, CURRENT_DATE);
+-- INSERT INTO question (id, questionText, hasManyAnswers, createdAt, updatedAt)
+-- VALUES (2, "Što je kolnička traka?", false, CURRENT_DATE, CURRENT_DATE);

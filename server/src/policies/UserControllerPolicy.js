@@ -32,12 +32,12 @@ module.exports = {
           break;
         case "name":
           res.status(400).send({
-            error: 'you must provide us with name!'
+            error: 'You must provide us with name!'
           });
           break;
         case "surname":
           res.status(400).send({
-            error: 'you must provide us with surname!'
+            error: 'You must provide us with surname!'
           })
         default:
           res.status(400).send({

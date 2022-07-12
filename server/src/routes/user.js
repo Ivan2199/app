@@ -10,6 +10,7 @@ router.post(
   UserControllerPolicy.register,
   UserController.register
 );
+
 router.post("/login", UserController.login);
 
 module.exports = router;
