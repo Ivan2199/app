@@ -2,38 +2,38 @@
   <div class="container">
     <img class="picture" src="../../assets/Image02Road.png" />
     <h1>
-      Ponašanje&nbsp;&nbsp;&nbsp;<br />
-      &nbsp;&nbsp;Sudionika u<br />
+      Propisi u&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;Cestovnom<br />
       Prometu&nbsp;&nbsp;&nbsp;
     </h1>
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in questions.slice(16)"
+          v-for="(question, index) in sliceItems(0, 16)"
           :key="question.id"
           class="question_answer"
         >
-          <div v-if="question.category == 'PonasanjeSudionikauPrometu'">
+          <div v-if="question.category == 'PropisiuCestovnomPrometu'">
             <div class="question">
               {{ index + 1 }}. {{ question.text }}
               <br />
+              <img
+                v-if="question.imageUrl"
+                class="question_image"
+                v-bind:src="question.imageUrl"
+              />
             </div>
-            <draggable>
-              <span
-                v-for="answer_option in question.answerOptions"
-                :key="answer_option.id"
-                class="answers"
-              >
-                <div v-if="answer_option.isCorrect" class="True">
-                  {{ answer_option.text }}
-                  <br />
-                </div>
-                <div v-else class="notTrue">
-                  {{ answer_option.text }}
-                  <br />
-                </div>
-              </span>
-            </draggable>
+
+            <label
+              v-for="answer_option in question.answerOptions"
+              :key="answer_option.id"
+              v-bind:class="True"
+            >
+              <button>
+                {{ answer_option.text }}
+                <span v-on:click="checkTrue(answer_option)">check</span>
+              </button>
+            </label>
           </div>
         </div>
       </article>
@@ -42,14 +42,11 @@
 </template>
 
 <script>
-import draggable from 'vuedraggable'
 export default {
-  components: {
-    draggable
-  },
   data() {
     return {
-      questions: null
+      questions: null,
+      True: ''
     }
   },
   mounted() {
@@ -57,11 +54,26 @@ export default {
       .then((res) => res.json())
       .then((data) => (this.questions = data))
       .catch((err) => console.log(err.message))
+  },
+  methods: {
+    sliceItems: function (start, end) {
+      return this.questions.slice(start, end)
+    },
+    checkTrue: function (value) {
+      if (value.isCorrect == true) {
+        this.True = 'True'
+      } else {
+        this.True = 'notTrue'
+      }
+    }
   }
 }
 </script>
 
 <style scoped>
+.myClass {
+  background: green;
+}
 article {
   color: white;
   border-collapse: collapse;
@@ -133,7 +145,33 @@ article {
   background: rgba(80, 79, 79, 0.444);
   border-radius: 25px;
 }
+
+.answer_options {
+  background: rgb(37, 37, 37);
+  max-height: 120px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  justify-items: center;
+  transition: transform 0.5s;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
+}
+
+.answer_options:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #1bff027a;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
+  color: #ffffff;
+  border-radius: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .notTrue {
+  background: rgb(37, 37, 37);
   max-height: 120px;
   font-size: 20px;
   margin: 10px;
@@ -141,17 +179,44 @@ article {
   border-radius: 15px;
   text-align: center;
   justify-items: center;
+  transition: transform 0.5s;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
 }
+
+.notTrue:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #1bff027a;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
+  color: #ffffff;
+  border-radius: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .True {
+  background: #1bff027a;
   max-height: 120px;
   font-size: 20px;
-  background-color: green;
   margin: 10px;
   padding: 10px;
   text-align: center;
   border-radius: 15px;
   justify-items: center;
+  transition: transform 0.5s;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
 }
+.True:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #1bff027a;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
+  color: #ffffff;
+  border-radius: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   width: 9px;
 }
@@ -179,5 +244,9 @@ h1 {
   left: -10%;
   overflow: hidden;
   opacity: 0.5;
+}
+.question_image {
+  position: relative;
+  max-width: 500px;
 }
 </style>

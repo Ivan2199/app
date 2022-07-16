@@ -12,10 +12,20 @@ const serializeQuestion = function (question) {
   const questionFormatted = toCamel(questionJSON);
   const QuestionSchema = {
     id: questionFormatted.id,
+    imageUrl: questionFormatted.imageUrl,
     text: questionFormatted.text,
     category: questionFormatted.category,
     answerOptions: serializeAnswerOptionList(questionFormatted.answerOptions),
   };
+  if (questionFormatted.answerOptions) {
+    QuestionSchema.answerOptions = serializeAnswerOptionList(
+      questionFormatted.answerOptions
+    );
+  }
+  if (questionFormatted.questionQuiz) {
+    QuestionSchema.sequenceNumber =
+      questionFormatted.questionQuiz.sequenceNumber;
+  }
   return QuestionSchema;
 };
 

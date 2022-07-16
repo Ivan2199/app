@@ -5,12 +5,16 @@ import AboutView from '../views/AboutView.vue'
 import LoginPage from '../views/LoginPage.vue'
 import RegistrationPage from '../views/RegistrationPage.vue'
 import MainPage from '../views/MainPage.vue'
+
 import Theory from '../views/TheoryPage.vue'
 import PropisiuCestovnomPrometu from '../views/TheoryPageComponents/PropisiuCestovnomPrometu.vue'
 import CestaiNjenaObiljezja from '../views/TheoryPageComponents/CestaiNjenaObiljezja.vue'
 import PonasanjeSudionikauPrometu from '../views/TheoryPageComponents/PonasanjeSudionikauPrometu.vue'
 import ZnakoviuPrometu from '../views/TheoryPageComponents/ZnakoviuPrometu.vue'
 import OstaliSudioniciuCestovnomPrometu from '../views/TheoryPageComponents/OstaliSudioniciuCestovnomPrometu.vue'
+
+import QuestionPage from '../views/QuestionsPage.vue'
+import PropisiuCestovnomPrometuPitanja from '../views/QuestionPageComponents/PropisiuCestovnomPrometuPitanja.vue'
 
 Vue.use(VueRouter)
 
@@ -69,6 +73,16 @@ const routes = [
     path: 'OstaliSudioniciuCestovnomPrometu',
     name: 'OstaliSudioniciuCestovnomPrometu',
     component: OstaliSudioniciuCestovnomPrometu
+  },
+  {
+    path: '/QuestionPage',
+    name: 'QuestionPage',
+    component: QuestionPage
+  },
+  {
+    path: '/PropisiuCestovnomPrometuPitanja',
+    name: 'PropisiuCestovnomPrometuPitanja',
+    component: PropisiuCestovnomPrometuPitanja
   }
 ]
 

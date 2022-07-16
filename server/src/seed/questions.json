@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "imageUrl":"../../../client2/src/assets/avatar.png",
+    "text": "Što je preglednost?",
+    "category": "PropisiuCestovnomPrometu",
+    "answers": [
+        {
+            "text": "konkretan prostor što ga sudionik u cestovnom prometu može vidjeti s mjesta na kojemu se nalazi",
+            "isCorrect": true
+        },
+        {
+            "text": "jasno uočavanje drugih sudionika u prometu ili prometnih znakova na određenoj udaljenosti",
+            "isCorrect": false
+        }
+    ]
+}

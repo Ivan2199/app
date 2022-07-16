@@ -8,14 +8,15 @@ const {
 // req.params
 
 const allowedCategories = {
-  Crossroads: "Crossroads",
-  MedicalEmergency: "MedicalEmergency",
+  PropisiuCestovnomPrometu: "PropisiuCestovnomPrometu",
+  CestaiNjenaObiljezja: "CestaiNjenaObiljezja",
+  PonasanjeSudionikauPrometu: "PonasanjeSudionikauPrometu",
   RoadSigns: "RoadSigns",
 };
 
 module.exports = {
   async addQuestion(req, res) {
-    const { text, category, answers } = req.body;
+    const { id, imageUrl, text, category, answers } = req.body;
 
     const categoryExists = Object.values(allowedCategories).find(
       (c) => c == category
@@ -26,7 +27,7 @@ module.exports = {
         .json({ message: `You have sent a non-allowed category: ${category}` });
     }
     const question = await Question.create(
-      { text, category },
+      { id, imageUrl, text, category },
       { include: AnswerOption }
     );
     answers.map(async (answer) => {
@@ -62,7 +63,8 @@ module.exports = {
   async getQuestions(req, res) {
     const { category } = req.query;
     const queryParams = {
-      include: AnswerOption,
+      include: [AnswerOption],
+      order: [[AnswerOption, "id", "ASC"]],
     };
     if (category) {
       queryParams.where = {
@@ -70,6 +72,7 @@ module.exports = {
       };
     }
     const questions = await Question.findAll(queryParams);
+
     return res.status(200).json(serializeQuestionList(questions));
   },
   async deleteQuestion(req, res) {
@@ -81,6 +84,6 @@ module.exports = {
         .json({ message: `Question by ID ${id} not found` });
     }
     await question.destroy();
-    return res.status(200).json({ message: "question succsecsufly deleted" });
+    return res.status(200).json({ message: "question successfully deleted" });
   },
 };

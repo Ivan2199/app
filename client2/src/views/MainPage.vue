@@ -12,7 +12,7 @@
           <img src="@/assets/avatar.png" alt="John Doe" />
           <div v-if="error">There's been an error</div>
           <div v-else>
-            <h2>Bok {{ this.$store.state.user.name }}</h2>
+            <h2>Bok {{ fullName }}</h2>
           </div>
           <a href="#" class="btn2 btn2-out">Profile</a>
         </div>
@@ -51,7 +51,7 @@
         <p>Prometni propisi i sigurnosna pravila</p>
         <p>Prva pomoć</p>
         <div class="btns1">
-          <router-link class="theoryBtn1" :to="{ name: 'theory' }"
+          <router-link class="theoryBtn1" :to="{ name: 'QuestionPage' }"
             >Idemo</router-link
           >
           <label class="theoryBtn1" for="check1">Izlaz</label>
