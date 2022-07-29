@@ -2,38 +2,71 @@
   <div class="container">
     <img class="picture" src="../../assets/Image02Road.png" />
     <h1>
-      Propisi u&nbsp;&nbsp;&nbsp;<br />
-      &nbsp;&nbsp;&nbsp;Cestovnom<br />
-      Prometu&nbsp;&nbsp;&nbsp;
+      Propisi u<br />
+      Cestovnom<br />
+      Prometu
     </h1>
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in sliceItems(0, 16)"
+          v-for="question in questions.slice(a, b)"
           :key="question.id"
           class="question_answer"
+          v-show="questionsStart"
         >
           <div v-if="question.category == 'PropisiuCestovnomPrometu'">
-            <div class="question">
-              {{ index + 1 }}. {{ question.text }}
-              <br />
+            <div class="box_question">
+              <p>{{ b }}. {{ question.text }}</p>
               <img
                 v-if="question.imageUrl"
                 class="question_image"
                 v-bind:src="question.imageUrl"
               />
             </div>
+            <div class="box_suggestions">
+              <ul>
+                <li
+                  v-for="answer_option in question.answerOptions"
+                  :key="answer_option.id"
+                  :class="select ? check(answer_option) : ''"
+                  @click="selectResponse(answer_option)"
+                >
+                  {{ answer_option.text }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-            <label
-              v-for="answer_option in question.answerOptions"
-              :key="answer_option.id"
-              v-bind:class="True"
+        <div class="box-quizEnd" v-if="questionsEnd">
+          <h1 class="theEnd">KRAJ!!</h1>
+          <h2>Broj točnih odgovora:</h2>
+          <h2>{{ this.score }}/{{ this.numberOfQuestions }}</h2>
+          <div class="restart-button">
+            <button @click="restartQuestions">Restart</button>
+          </div>
+        </div>
+
+        <div class="footer-quiz" v-if="!questionsEnd">
+          <div class="box-button">
+            <button
+              @click="skipQuestion()"
+              :style="!next ? 'background-color: rgb(106, 128, 202)' : ''"
             >
-              <button>
-                {{ answer_option.text }}
-                <span v-on:click="checkTrue(answer_option)">check</span>
-              </button>
-            </label>
+              Skip
+            </button>
+            <button
+              @click="nextQuestion()"
+              :style="next ? 'background-color: rgb(106, 128, 202)' : ''"
+            >
+              Next
+            </button>
+            <button
+              @click="returnQuestion"
+              :style="returnQ ? 'background-color: rgb(106, 128, 202)' : ''"
+            >
+              Return
+            </button>
           </div>
         </div>
       </article>
@@ -46,7 +79,15 @@ export default {
   data() {
     return {
       questions: null,
-      True: ''
+      numberOfQuestions: 5,
+      questionsStart: true,
+      questionsEnd: false,
+      select: false,
+      score: 0,
+      next: false,
+      returnQ: false,
+      a: 0,
+      b: 1
     }
   },
   mounted() {
@@ -56,36 +97,83 @@ export default {
       .catch((err) => console.log(err.message))
   },
   methods: {
-    sliceItems: function (start, end) {
-      return this.questions.slice(start, end)
-    },
-    checkTrue: function (value) {
-      if (value.isCorrect == true) {
-        this.True = 'True'
-      } else {
-        this.True = 'notTrue'
+    selectResponse(value) {
+      this.select = true
+      this.next = true
+      if (value.isCorrect) {
+        this.score++
       }
+    },
+    check(status) {
+      if (status.isCorrect) {
+        return 'correct'
+      } else {
+        return 'incorrect'
+      }
+    },
+    nextQuestion() {
+      if (!this.next) {
+        return
+      }
+      if (this.b < this.numberOfQuestions) {
+        this.a++
+        this.b++
+        this.select = false
+        this.next = false
+        this.returnQ = true
+      } else {
+        ;(this.questionsStart = false), (this.questionsEnd = true)
+      }
+    },
+    skipQuestion() {
+      if (this.next) {
+        return
+      }
+      if (this.b < this.numberOfQuestions) {
+        this.a++
+        this.b++
+        this.select = false
+        this.returnQ = true
+      } else {
+        ;(this.questionsStart = false), (this.questionsEnd = true)
+      }
+    },
+    returnQuestion() {
+      if (this.a > 1) {
+        this.a--
+        this.b--
+      } else {
+        this.a = 0
+        this.b = 1
+        this.returnQ = false
+      }
+    },
+    restartQuestions() {
+      this.a = 0
+      this.b = 1
+      this.score = 0
+      this.next = false
+      this.select = false
+      this.questionsStart = true
+      this.questionsEnd = false
+      this.returnQ = false
     }
   }
 }
 </script>
 
 <style scoped>
-.myClass {
-  background: green;
-}
 article {
+  display: block;
   color: white;
   border-collapse: collapse;
   height: 89%;
-  width: 41%;
+  width: 56%;
   margin: 50px 10%;
   position: fixed;
   top: 48%;
-  left: 68%;
+  left: 60%;
   transform: translate(-50%, -50%);
-  max-width: 2000px;
-  max-height: 2000px;
   padding: 30px;
   background: rgb(41, 40, 40);
   overflow-y: scroll;
@@ -97,7 +185,7 @@ article {
   content: '';
   position: fixed;
   top: 53.2%;
-  left: 78%;
+  left: 70%;
   transform: translate(-50%, -50%);
   background: linear-gradient(
     45deg,
@@ -117,7 +205,7 @@ article {
     rgb(0, 174, 255)
   );
   background-size: 400%;
-  width: 42%;
+  width: 57%;
   height: 90.5%;
   border-radius: 25px;
   z-index: 10;
@@ -139,6 +227,8 @@ article {
   filter: blur(40px);
 }
 .question_answer {
+  position: relative;
+  vertical-align: middle;
   font-size: 30px;
   margin: 10px;
   padding: 10px;
@@ -146,75 +236,76 @@ article {
   border-radius: 25px;
 }
 
-.answer_options {
+.box_suggestions {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-flow: column;
+}
+
+li {
   background: rgb(37, 37, 37);
-  max-height: 120px;
   font-size: 20px;
-  margin: 10px;
   padding: 10px;
-  border-radius: 15px;
-  text-align: center;
   justify-items: center;
   transition: transform 0.5s;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-}
-
-.answer_options:hover {
-  transform: scale(1.1);
-  z-index: 100;
-  background: #1bff027a;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-  color: #ffffff;
-  border-radius: 30px;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.notTrue {
-  background: rgb(37, 37, 37);
-  max-height: 120px;
-  font-size: 20px;
+  list-style: none;
+  line-height: 2;
+  border: 1px solid #cdd2d2;
   margin: 10px;
-  padding: 10px;
   border-radius: 15px;
-  text-align: center;
-  justify-items: center;
-  transition: transform 0.5s;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-}
-
-.notTrue:hover {
-  transform: scale(1.1);
-  z-index: 100;
-  background: #1bff027a;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-  color: #ffffff;
-  border-radius: 30px;
-  opacity: 1;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.True {
-  background: #1bff027a;
-  max-height: 120px;
-  font-size: 20px;
+li:hover {
+  transform: scale(1.1);
+  background-color: #e7eae0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
+}
+
+li.correct {
+  border: 1px solid rgb(74, 219, 74);
+  background-color: rgb(74, 219, 74);
+  color: white;
+  font-weight: 600;
+}
+
+li.incorrect {
+  border: 1px solid rgb(240, 117, 100);
+  background-color: rgb(240, 117, 100);
+  color: white;
+  font-weight: 600;
+}
+
+.box-button {
+  display: flex;
+  width: 100%;
+}
+
+.footer-quiz .box-button button {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  left: 24%;
+  outline: none;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 15px;
   margin: 10px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 15px;
-  justify-items: center;
-  transition: transform 0.5s;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-}
-.True:hover {
-  transform: scale(1.1);
-  z-index: 100;
-  background: #1bff027a;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
-  color: #ffffff;
-  border-radius: 30px;
-  opacity: 1;
-  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #a09f9ff5;
 }
 
 ::-webkit-scrollbar {
@@ -229,14 +320,46 @@ article {
 }
 h1 {
   color: #ffffff;
-  font-size: 140px;
-  font-weight: 700;
+  font-size: 120px;
+  font-weight: 500;
   position: absolute;
   top: 25%;
   left: 5%;
 }
-.question {
+.theEnd {
+  font-size: 70px;
+  position: absolute;
+  left: 40%;
+  top: 38%;
+}
+
+.box-quizEnd {
+  font-size: 50px;
+}
+.box_question {
   margin-bottom: 15px;
+}
+.restart-button {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.restart-button button {
+  width: 150px;
+  height: 35px;
+  outline: none;
+  border: 0;
+  background-color: rgb(106, 128, 202);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 .picture {
   position: fixed;

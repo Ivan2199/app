@@ -3,6 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
+const signRoutes = require("./routes/sign");
 const quizResultRoutes = require("./routes/quizResult");
 const quizRoutes = require("./routes/quiz");
 const userRoutes = require("./routes/user");
@@ -16,6 +17,7 @@ app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use("/sign", signRoutes);
 app.use("/quiz-result", quizResultRoutes);
 app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);

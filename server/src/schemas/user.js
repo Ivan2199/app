@@ -12,6 +12,8 @@ const serializeUser = function (user) {
     id: userFormatted.id,
     email: userFormatted.email,
     name: userFormatted.name,
+    surname: userFormatted.surname,
+    gender: userFormatted.gender,
   };
   return UserSchema;
 };

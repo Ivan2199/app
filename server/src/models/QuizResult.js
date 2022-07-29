@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       startTime: DataTypes.DATE,
       endTime: DataTypes.DATE,
       score: DataTypes.REAL,
+      status: DataTypes.STRING,
     },
     {
       freezeTableName: true,

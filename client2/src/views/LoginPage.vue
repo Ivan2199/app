@@ -14,7 +14,7 @@
                     <v-text-field label="Email" v-model="email"></v-text-field>
                     <br />
                     <v-text-field
-                      label="Password"
+                      label="Lozinka"
                       type="password"
                       v-model="password"
                       autocomplete="new-password"
@@ -26,7 +26,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="primary" @click="login">Login</v-btn>
+                  <v-btn color="primary" @click="login">Prijavi se</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>

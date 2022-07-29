@@ -27,38 +27,77 @@
               :to="{ name: 'OstaliSudioniciuCestovnomPrometu' }"
               ><li>Ostali Sudionici u cestovnom Prometu</li></router-link
             >
-            <a href="BicepCurl.html"
-              ><li>Uočavanje prometnih uvjeta i situacija</li></a
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'UocavanjePrometnihUvjetaiSituacija' }"
+              ><li>Uočavanje prometnih uvjeta i situacija</li></router-link
             >
-            <a href="BicepCurl.html"><li>Prometna pravila</li></a>
-            <a href="BicepCurl.html"
-              ><li>Vozilo u funkciji sigurnosti prometa</li></a
+            <router-link class="theoryLink" :to="{ name: 'PrometnaPravila' }"
+              ><li>Prometna pravila</li></router-link
             >
-            <a href="BicepCurl.html"><li>Vožnja u naselju</li></a>
-            <a href="BicepCurl.html"><li>Vožnja izvan naselja</li></a>
-            <a href="BicepCurl.html"
-              ><li>Postupak u slučaju prometne nesreće</li></a
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'VozilouFunkcijiSigurnostiPrometa' }"
+              ><li>Vozilo u funkciji sigurnosti prometa</li></router-link
             >
-            <a href="BicepCurl.html"><li>Vožnja u posebnim uvjetima</li></a>
+            <router-link class="theoryLink" :to="{ name: 'VoznjauNaselju' }"
+              ><li>Vožnja u naselju</li></router-link
+            >
+            <router-link class="theoryLink" :to="{ name: 'VoznjaIzvanNaselja' }"
+              ><li>Vožnja izvan naselja</li></router-link
+            >
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'PostupakuSlucajuPrometneNesrece' }"
+              ><li>Postupak u slučaju prometne nesreće</li></router-link
+            >
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'VoznjauPosebnimUvjetima' }"
+              ><li>Vožnja u posebnim uvjetima</li></router-link
+            >
           </ul>
         </div>
         <h2 class="headerOne">
           Prometni <br />
-          Propisi i <br />Sigurnosna <br />
+          Propisi i <br />
+          Sigurnosna <br />
           Pravila
         </h2>
       </section>
       <section>
         <div class="box2 wrap2">
           <ul>
-            <a href="Deadlift.html"><li>Uvod u prvu pomoć</li></a>
-            <a href="Benchpress.html"><li>Postupak s unesrećenom osobom</li></a>
-            <a href="BicepCurl.html"><li>Gubitak svijesti</li></a>
-            <a href="BicepCurl.html"><li>Krvarenje</li></a>
-            <a href="BicepCurl.html"><li>Ozljede i rane</li></a>
-            <a href="BicepCurl.html"><li>Ozljede kostiju i zglobova</li></a>
-            <a href="BicepCurl.html"><li>Akcidentalna stanja</li></a>
-            <a href="BicepCurl.html"><li>Naglo nastupajuća stanja</li></a>
+            <router-link class="theoryLink" :to="{ name: 'UvoduPrvuPomoc' }"
+              ><li>Uvod u prvu pomoć</li></router-link
+            >
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'PostupaksUnesrecenomOsobom' }"
+              ><li>Postupak s unesrećenom osobom</li></router-link
+            >
+            <router-link class="theoryLink" :to="{ name: 'GubitakSvijesti' }"
+              ><li>Gubitak svijesti</li></router-link
+            >
+            <router-link class="theoryLink" :to="{ name: 'KrvarenjeStranica' }"
+              ><li>Krvarenje</li></router-link
+            >
+            <router-link class="theoryLink" :to="{ name: 'OzljedeiRane' }"
+              ><li>Ozljede i rane</li></router-link
+            >
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'OzljedeKostijuiZglobova' }"
+              ><li>Ozljede kostiju i zglobova</li></router-link
+            >
+            <router-link class="theoryLink" :to="{ name: 'AkcidentalnaStanja' }"
+              ><li>Akcidentalna stanja</li></router-link
+            >
+            <router-link
+              class="theoryLink"
+              :to="{ name: 'NagloNastupajucaStanja' }"
+              ><li>Naglo nastupajuća stanja</li></router-link
+            >
           </ul>
         </div>
         <h2 class="headerOne2">

@@ -16,6 +16,7 @@ const serializeQuizResult = function (quizResult) {
     startTime: quizResultFormatted.startTime,
     endTime: quizResultFormatted.endTime,
     score: quizResultFormatted.score,
+    status: quizResultFormatted.status,
     userAnswers: serializeAnswerOptionList(quizResultFormatted.answerOptions),
     quiz: serializeQuiz(quizResultFormatted.quiz),
   };

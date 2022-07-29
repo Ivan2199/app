@@ -12,7 +12,7 @@ const serializeQuiz = function (quiz) {
   const QuizSchema = {
     id: quizFormatted.id,
     title: quizFormatted.title,
-    answerOptions: serializeQuestionList(quizFormatted.questions),
+    questions: serializeQuestionList(quizFormatted.questions),
   };
   return QuizSchema;
 };

@@ -14,22 +14,27 @@
                     <v-text-field label="Email" v-model="email"></v-text-field>
                     <br />
                     <v-text-field
-                      label="Password"
+                      label="Lozinka"
                       type="password"
                       v-model="password"
                       autocomplete="new-password"
                     ></v-text-field>
                     <br />
                     <v-text-field
-                      label="Name"
+                      label="Ime"
                       type="text"
                       v-model="name"
                     ></v-text-field>
                     <br />
                     <v-text-field
-                      label="Surname"
+                      label="Prezime"
                       type="text"
                       v-model="surname"
+                    ></v-text-field>
+                    <v-text-field
+                      label="Spol"
+                      type="text"
+                      v-model="gender"
                     ></v-text-field>
                     <br />
                     <div class="danger-alert" v-html="error" />
@@ -38,7 +43,9 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="primary" @click="register">Register</v-btn>
+                  <v-btn color="primary" @click="register"
+                    >Registriraj se</v-btn
+                  >
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -58,6 +65,7 @@ export default {
       password: '',
       name: '',
       surname: '',
+      gender: '',
       error: null
     }
   },
@@ -68,7 +76,8 @@ export default {
           email: this.email,
           password: this.password,
           name: this.name,
-          surname: this.surname
+          surname: this.surname,
+          gender: this.gender
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)

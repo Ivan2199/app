@@ -11,17 +11,18 @@ const {
   serializeQuizResultList,
 } = require("../schemas/quizResult");
 
-//new Date().toISOString()
-
 module.exports = {
   async createQuizResult(req, res) {
-    const { userId, quizId, startTime, endTime, answers } = req.body;
+    const { userId, score, quizId, status, startTime, endTime, answers } =
+      req.body;
     const quizResult = await QuizResult.create(
       {
         userId,
         quizId,
         startTime,
         endTime,
+        status,
+        score,
       },
       {
         include: [
@@ -52,22 +53,41 @@ module.exports = {
     });
     await quizResult.reload();
 
-    for (const question of quizResult.Quiz.Questions) {
-      for (const answer of question.AnswerOptions) {
-        console.log(answer.toJSON());
-      }
-    }
+    // for (const question of quizResult.Quiz.Questions) {
+    //   for (const answer of question.AnswerOptions) {
+    //     console.log(answer.toJSON());
+    //   }
+    // }
 
-    const correctAnswers = quizResult.AnswerOptions.filter(
-      (answer) => answer.isCorrect
-    );
+    // const correctAnswers = quizResult.AnswerOptions.filter(
+    //   (answer) => answer.isCorrect
+    // );
 
-    const score = (correctAnswers.length / answers.length) * 100;
+    // const score = (correctAnswers.length / answers.length) * 100;
 
-    await quizResult.update({ score });
+    // await quizResult.update({ score });
     return res.status(201).json(serializeQuizResult(quizResult));
   },
+  async getQuizResults(req, res) {
+    const quizResults = await QuizResult.findAll({
+      include: [
+        {
+          model: AnswerOption,
+          include: {
+            model: Question,
+          },
+        },
+        {
+          model: Quiz,
+          include: {
+            model: Question,
+            include: {
+              model: AnswerOption,
+            },
+          },
+        },
+      ],
+    });
+    return res.status(200).json(quizResults);
+  },
 };
-
-// camel case = camelCase
-// snake case = snake_case

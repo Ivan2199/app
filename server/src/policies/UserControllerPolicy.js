@@ -9,7 +9,8 @@ module.exports = {
         .required()
         .regex(new RegExp("^[a-zA-Z0-9]{8,32}$")),
       name: Joi.string().required(),
-      surname: Joi.string().required()
+      surname: Joi.string().required(),
+      gender: Joi.string().required(),
     });
 
     const { error, value } = schema.validate(req.body);
@@ -32,13 +33,19 @@ module.exports = {
           break;
         case "name":
           res.status(400).send({
-            error: 'You must provide us with name!'
+            error: "You must provide us with name!",
           });
           break;
         case "surname":
           res.status(400).send({
-            error: 'You must provide us with surname!'
-          })
+            error: "You must provide us with surname!",
+          });
+          break;
+        case "gender":
+          res.status(400).send({
+            error: "You must provide us with gender!",
+          });
+          break;
         default:
           res.status(400).send({
             error: "Invalid registration information",

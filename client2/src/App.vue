@@ -22,18 +22,13 @@
                   v-if="!$store.state.isUserLoggedIn"
                   class="nav-link active"
                   :to="{ name: 'login' }"
-                  >Home</router-link
+                  >Početna</router-link
                 >
                 <router-link
                   v-if="$store.state.isUserLoggedIn"
                   class="nav-link active"
                   :to="{ name: 'mainpage' }"
-                  >Home</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'about' }"
-                  >About</router-link
+                  >Početna</router-link
                 >
               </li>
             </ul>
@@ -44,7 +39,7 @@
                 type="submit"
               >
                 <router-link class="nav-link" :to="{ name: 'login' }"
-                  >Login</router-link
+                  >Prijava</router-link
                 >
               </button>
               <button
@@ -53,7 +48,7 @@
                 type="submit"
               >
                 <router-link class="nav-link" :to="{ name: 'registration' }"
-                  >Register</router-link
+                  >Registracija</router-link
                 >
               </button>
               <button
@@ -62,7 +57,7 @@
                 type="submit"
                 @click="logout"
               >
-                Log Out
+                Odjava
               </button>
             </form>
           </div>

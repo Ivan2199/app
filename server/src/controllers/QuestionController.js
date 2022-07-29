@@ -11,12 +11,37 @@ const allowedCategories = {
   PropisiuCestovnomPrometu: "PropisiuCestovnomPrometu",
   CestaiNjenaObiljezja: "CestaiNjenaObiljezja",
   PonasanjeSudionikauPrometu: "PonasanjeSudionikauPrometu",
-  RoadSigns: "RoadSigns",
+  OstaliSudioniciuPrometu: "OstaliSudioniciuPrometu",
+  ZnakoviuPrometu: "ZnakoviuPrometu",
+  UocavanjePrometnihUvjetaiSituacija: "UocavanjePrometnihUvjetaiSituacija",
+  PrometnaPravila: "PrometnaPravila",
+  VozilouFunkcijiSigurnostiPrometa: "VozilouFunkcijiSigurnostiPrometa",
+  VoznjauNaselju: "VoznjauNaselju",
+  VoznjaIzvanNaselja: "VoznjaIzvanNaselja",
+  PostupakuSlucajuPrometneNesrece: "PostupakuSlucajuPrometneNesrece",
+  VoznjauPosebnimUvjetima: "VoznjauPosebnimUvjetima",
+  UvoduPrvuPomoc: "UvoduPrvuPomoc",
+  PostupaksUnesrecenomOsobom: "PostupaksUnesrecenomOsobom",
+  GubitakSvijesti: "GubitakSvijesti",
+  Krvarenje: "Krvarenje",
+  OzljedeiRane: "OzljedeiRane",
+  OzljedeKostijuiZglobova: "OzljedeKostijuiZglobova",
+  AkcidentalnaStanja: "AkcidentalnaStanja",
+  NagloNastupajucaStanja: "NagloNastupajucaStanja",
 };
 
 module.exports = {
   async addQuestion(req, res) {
-    const { id, imageUrl, text, category, answers } = req.body;
+    const {
+      id,
+      imageUrl,
+      scoreWorth,
+      correctAnswers,
+      text,
+      videoUrl,
+      category,
+      answers,
+    } = req.body;
 
     const categoryExists = Object.values(allowedCategories).find(
       (c) => c == category
@@ -27,7 +52,7 @@ module.exports = {
         .json({ message: `You have sent a non-allowed category: ${category}` });
     }
     const question = await Question.create(
-      { id, imageUrl, text, category },
+      { id, imageUrl, scoreWorth, text, correctAnswers, videoUrl, category },
       { include: AnswerOption }
     );
     answers.map(async (answer) => {

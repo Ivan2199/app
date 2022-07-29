@@ -15,6 +15,9 @@ const serializeQuestion = function (question) {
     imageUrl: questionFormatted.imageUrl,
     text: questionFormatted.text,
     category: questionFormatted.category,
+    scoreWorth: questionFormatted.scoreWorth,
+    correctAnswers: questionFormatted.correctAnswers,
+    videoUrl: questionFormatted.videoUrl,
     answerOptions: serializeAnswerOptionList(questionFormatted.answerOptions),
   };
   if (questionFormatted.answerOptions) {

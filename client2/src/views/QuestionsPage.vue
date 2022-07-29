@@ -11,35 +11,59 @@
             >
             <router-link
               class="questionLink"
-              :to="{ name: 'CestaiNjenaObiljezja' }"
+              :to="{ name: 'CestaiNjenaObiljezjaPitanja' }"
               ><li>Cesta i njena obilježja</li></router-link
             >
             <router-link
               class="questionLink"
-              :to="{ name: 'PonasanjeSudionikauPrometu' }"
+              :to="{ name: 'PonasanjeSudionikauPrometuPitanja' }"
               ><li>Ponašanje sudionika u prometu</li></router-link
             >
-            <router-link class="questionLink" :to="{ name: 'ZnakoviuPrometu' }"
+            <router-link
+              class="questionLink"
+              :to="{ name: 'ZnakoviuPrometuPitanja' }"
               ><li>Znakovi u prometu</li></router-link
             >
             <router-link
               class="questionLink"
-              :to="{ name: 'OstaliSudioniciuCestovnomPrometu' }"
-              ><li>Ostali Sudionici u cestovnom Prometu</li></router-link
+              :to="{ name: 'OstaliSudioniciuCestovnomPrometuPitanja' }"
+              ><li>Ostali sudionici u cestovnom prometu</li></router-link
             >
-            <a href="BicepCurl.html"
-              ><li>Uočavanje prometnih uvjeta i situacija</li></a
+            <router-link
+              class="questionLink"
+              :to="{ name: 'UocavanjePrometnihUvjetaiSituacijaPitanja' }"
+              ><li>Uočavanje prometnih uvjeta i situacija</li></router-link
             >
-            <a href="BicepCurl.html"><li>Prometna pravila</li></a>
-            <a href="BicepCurl.html"
-              ><li>Vozilo u funkciji sigurnosti prometa</li></a
+            <router-link
+              class="questionLink"
+              :to="{ name: 'PrometnaPravilaPitanja' }"
+              ><li>Prometna pravila</li></router-link
             >
-            <a href="BicepCurl.html"><li>Vožnja u naselju</li></a>
-            <a href="BicepCurl.html"><li>Vožnja izvan naselja</li></a>
-            <a href="BicepCurl.html"
-              ><li>Postupak u slučaju prometne nesreće</li></a
+            <router-link
+              class="questionLink"
+              :to="{ name: 'VozilouFunkcijiSigurnostiPrometaPitanja' }"
+              ><li>Vozilo u funkciji sigurnosti prometa</li></router-link
             >
-            <a href="BicepCurl.html"><li>Vožnja u posebnim uvjetima</li></a>
+            <router-link
+              class="questionLink"
+              :to="{ name: 'VoznjauNaseljuPitanja' }"
+              ><li>Vožnja u naselju</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'VoznjaIzvanNaseljaPitanja' }"
+              ><li>Vožnja izvan naselja</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'PostupakuSlucajuPrometneNesrecePitanja' }"
+              ><li>Postupak u slučaju prometne nesreće</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'VoznjauPosebnimUvjetimaPitanja' }"
+              ><li>Vožnja u posebnim uvjetima</li></router-link
+            >
           </ul>
         </div>
         <h2 class="headerOne">
@@ -51,14 +75,44 @@
       <section>
         <div class="box2 wrap2">
           <ul>
-            <a href="Deadlift.html"><li>Uvod u prvu pomoć</li></a>
-            <a href="Benchpress.html"><li>Postupak s unesrećenom osobom</li></a>
-            <a href="BicepCurl.html"><li>Gubitak svijesti</li></a>
-            <a href="BicepCurl.html"><li>Krvarenje</li></a>
-            <a href="BicepCurl.html"><li>Ozljede i rane</li></a>
-            <a href="BicepCurl.html"><li>Ozljede kostiju i zglobova</li></a>
-            <a href="BicepCurl.html"><li>Akcidentalna stanja</li></a>
-            <a href="BicepCurl.html"><li>Naglo nastupajuća stanja</li></a>
+            <router-link
+              class="questionLink"
+              :to="{ name: 'UvoduPrvuPomocPitanja' }"
+              ><li>Uvod u prvu pomoć</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'PostupaksUnesrecenomOsobomPitanja' }"
+              ><li>Postupak s unesrećenom osobom</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'GubitakSvijestiPitanja' }"
+              ><li>Gubitak svijesti</li></router-link
+            >
+            <router-link class="questionLink" :to="{ name: 'KrvarenjePitanja' }"
+              ><li>Krvarenje</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'OzljedeiRanePitanja' }"
+              ><li>Ozljede i rane</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'OzljedeKostijuiZglobovaPitanja' }"
+              ><li>Ozljede kostiju i zglobova</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'AkcidentalnaStanjaPitanja' }"
+              ><li>Akcidentalna stanja</li></router-link
+            >
+            <router-link
+              class="questionLink"
+              :to="{ name: 'NagloNastupajucaStanjaPitanja' }"
+              ><li>Naglo nastupajuća stanja</li></router-link
+            >
           </ul>
         </div>
         <h2 class="headerOne2">

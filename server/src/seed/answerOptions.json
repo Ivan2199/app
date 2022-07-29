@@ -1,0 +1,32 @@
+[
+    {
+        "questionId":1,
+        "text": "dio kolnika namijenjen za uključivanje vozila u prometni tok sa sporedne ceste",
+        "isCorrect": true
+    },
+    {
+        "questionId":1,
+        "text": "dio kolnika namijenjen isključivo za pretjecanje",
+        "isCorrect": false
+    },
+    {
+        "questionId":2,
+        "text": "dio kolnika namijenjen za uključivanje vozila u prometni tok sa sporedne ceste",
+        "isCorrect": true
+    },
+    {
+        "questionId":2,
+        "text": "dio kolnika namijenjen isključivo za pretjecanje",
+        "isCorrect": false
+    },
+    {
+        "questionId":3,
+        "text": "dio kolnika namijenjen za uključivanje vozila u prometni tok sa sporedne ceste",
+        "isCorrect": true
+    },
+    {
+        "questionId":3,
+        "text": "dio kolnika namijenjen isključivo za pretjecanje",
+        "isCorrect": false
+    }
+]

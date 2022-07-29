@@ -12,9 +12,11 @@
           <img src="@/assets/avatar.png" alt="John Doe" />
           <div v-if="error">There's been an error</div>
           <div v-else>
-            <h2>Bok {{ fullName }}</h2>
+            <h2>Bok {{ name }}</h2>
           </div>
-          <a href="#" class="btn2 btn2-out">Profile</a>
+          <router-link class="btn2 btn2-out" :to="{ name: 'ProfilePage' }"
+            >Profil</router-link
+          >
         </div>
       </div>
     </div>
@@ -30,11 +32,11 @@
         <header>Teorija</header>
         <p>Prometni propisi i sigurnosna pravila</p>
         <p>Prva pomoć</p>
-        <div class="btns">
-          <router-link class="theoryBtn" :to="{ name: 'theory' }"
+        <div>
+          <router-link class="button GoButton" :to="{ name: 'theory' }"
             >Idemo</router-link
           >
-          <label class="theoryBtn" for="check">Izlaz</label>
+          <label class="button OutButton" for="check">Izlaz</label>
         </div>
       </div>
     </div>
@@ -47,14 +49,14 @@
         <div class="icon1">
           <img src="../assets/avatar.png" />
         </div>
-        <header>Confirm</header>
+        <header>Pitanja</header>
         <p>Prometni propisi i sigurnosna pravila</p>
         <p>Prva pomoć</p>
-        <div class="btns1">
-          <router-link class="theoryBtn1" :to="{ name: 'QuestionPage' }"
+        <div>
+          <router-link class="button GoButton" :to="{ name: 'QuestionPage' }"
             >Idemo</router-link
           >
-          <label class="theoryBtn1" for="check1">Izlaz</label>
+          <label class="button OutButton" for="check1">Izlaz</label>
         </div>
       </div>
     </div>
@@ -67,32 +69,36 @@
         <div class="icon2">
           <img src="../assets/avatar.png" />
         </div>
-        <header>Confirm</header>
-        <p>Are you sure want to permanently delete this Photo?</p>
-        <div class="btns2">
-          <router-link class="theoryBtn2" :to="{ name: 'theory' }"
+        <header>Kviz</header>
+        <div>
+          <router-link class="button GoButton" :to="{ name: 'QuizPage' }"
             >Idemo</router-link
           >
-          <label class="theoryBtn2" for="check2">Izlaz</label>
+          <label class="button OutButton" for="check2">Izlaz</label>
         </div>
       </div>
     </div>
 
-    <div class="container13">
+    <div class="container3">
       <input type="checkbox" id="check3" />
-      <label class="show_button3" for="check3">Video</label>
+      <label class="show_button3" for="check3">Znakovi</label>
       <div class="background3"></div>
       <div class="alert_box3">
         <div class="icon3">
           <img src="../assets/avatar.png" />
         </div>
-        <header>Confirm</header>
-        <p>Are you sure want to permanently delete this Photo?</p>
-        <div class="btns3">
-          <router-link class="theoryBtn3" :to="{ name: 'theory' }"
+        <div class="signElements">
+          <header>Znakovi</header>
+          <p>Znakovi Opasnosti</p>
+          <p>Znakovi Izričitih Naredbi</p>
+          <p>Znakovi Obavijesti</p>
+          <p>Znakovi Za Vođenje Prometa</p>
+        </div>
+        <div>
+          <router-link class="button GoButton" :to="{ name: 'RoadSign' }"
             >Idemo</router-link
           >
-          <label class="theoryBtn3" for="check3">Izlaz</label>
+          <label class="button OutButton" for="check3">Izlaz</label>
         </div>
       </div>
     </div>
@@ -103,15 +109,14 @@
 // import AuthenticationServices from '@/services/AuthenticationServices'
 
 export default {
-  name: 'MainPage',
   data() {
     return {
-      fullName: '',
+      name: '',
       error: false
     }
   },
   async mounted() {
-    this.fullName = this.$store.state.user.name
+    this.name = this.$store.state.user.name
   }
 }
 </script>

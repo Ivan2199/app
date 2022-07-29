@@ -2,21 +2,26 @@
   <div class="container">
     <img class="picture" src="../../assets/Image02Road.png" />
     <h1>
-      Ponašanje&nbsp;&nbsp;&nbsp;<br />
-      &nbsp;&nbsp;Sudionika u<br />
-      Prometu&nbsp;&nbsp;&nbsp;
+      Cesta i<br />
+      Njena<br />
+      Obilježja
     </h1>
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in questions.slice(16)"
+          v-for="(question, index) in sliceItems(16, 27)"
           :key="question.id"
           class="question_answer"
         >
-          <div v-if="question.category == 'CestaiNjenaObiljezja'">
+          <div v-if="question.category == 'CestaiNjenaObilježja'">
             <div class="question">
               {{ index + 1 }}. {{ question.text }}
               <br />
+              <img
+                v-if="question.imageUrl"
+                class="question_image"
+                v-bind:src="question.imageUrl"
+              />
             </div>
             <draggable>
               <span
@@ -57,23 +62,27 @@ export default {
       .then((res) => res.json())
       .then((data) => (this.questions = data))
       .catch((err) => console.log(err.message))
+  },
+  methods: {
+    sliceItems: function (start, end) {
+      return this.questions.slice(start, end)
+    }
   }
 }
 </script>
 
 <style scoped>
 article {
+  display: block;
   color: white;
   border-collapse: collapse;
   height: 89%;
-  width: 41%;
+  width: 56%;
   margin: 50px 10%;
   position: fixed;
   top: 48%;
-  left: 68%;
+  left: 60%;
   transform: translate(-50%, -50%);
-  max-width: 2000px;
-  max-height: 2000px;
   padding: 30px;
   background: rgb(41, 40, 40);
   overflow-y: scroll;
@@ -85,7 +94,7 @@ article {
   content: '';
   position: fixed;
   top: 53.2%;
-  left: 78%;
+  left: 70%;
   transform: translate(-50%, -50%);
   background: linear-gradient(
     45deg,
@@ -105,7 +114,7 @@ article {
     rgb(0, 174, 255)
   );
   background-size: 400%;
-  width: 42%;
+  width: 57%;
   height: 90.5%;
   border-radius: 25px;
   z-index: 10;
@@ -164,8 +173,8 @@ article {
 }
 h1 {
   color: #ffffff;
-  font-size: 140px;
-  font-weight: 700;
+  font-size: 120px;
+  font-weight: 500;
   position: absolute;
   top: 25%;
   left: 5%;
@@ -179,5 +188,9 @@ h1 {
   left: -10%;
   overflow: hidden;
   opacity: 0.5;
+}
+.question_image {
+  position: relative;
+  max-width: 500px;
 }
 </style>
