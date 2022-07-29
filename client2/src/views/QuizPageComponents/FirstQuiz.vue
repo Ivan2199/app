@@ -40,12 +40,13 @@
                   v-for="answer_option in question.answerOptions"
                   :key="answer_option.id"
                   :class="select ? check(answer_option) : ''"
+                  @click="selectResponse(answer_option, question)"
                 >
-                  <p @click="selectResponse(answer_option, question)">
-                    {{ answer_option.text }}
-                  </p>
+                  {{ answer_option.text }}
                 </li>
-                <button @click="CorrectOrNot(question)">Provjeri</button>
+                <button v-if="submitedAnswer" @click="CorrectOrNot(question)">
+                  Provjeri
+                </button>
               </ul>
             </div>
           </div>
@@ -115,7 +116,9 @@ export default {
       startTime: Date.parse(new Date()),
       time: true,
       endTime: '',
-      correctAnswers: 0
+      correctAnswers: 0,
+      checked: false,
+      submitedAnswer: true
     }
   },
   mounted: function () {
@@ -148,10 +151,13 @@ export default {
       if (this.answers.length == this.correctAnswers) {
         this.select = true
         this.score += question.scoreWorth
+        if (question.scoreWorth == 7) {
+          this.crossroads = true
+        }
         this.next = true
-      } else if (this.answers - length != this.correctAnswers) {
+        this.submitedAnswer = false
+      } else if (this.answers.length != this.correctAnswers) {
         this.select = true
-        this.score += 0
         this.next = true
       }
     },
@@ -170,7 +176,9 @@ export default {
         this.answers.push(answer.id)
       } else if (!answer.isCorrect) {
         this.next = true
-        this.nextQuestion()
+        this.select = true
+        this.submitedAnswer = false
+        setTimeout(() => this.nextQuestion(), 2000)
       }
     },
     check(status) {
@@ -192,10 +200,12 @@ export default {
       } else {
         this.x++
         this.y++
+        this.checked = false
         this.select = false
         this.next = false
         this.crossroads = false
         this.answers = []
+        this.submitedAnswer = true
       }
     },
     skipQuestion() {
@@ -212,6 +222,7 @@ export default {
         this.y++
         this.select = false
         this.answers = []
+        this.submitedAnswer = true
       }
     },
     restartQuiz() {
@@ -230,6 +241,7 @@ export default {
       this.deadline = new Date(new Date().getTime() + 45 * 60000)
       this.currentTime = Date.parse(this.deadline) - Date.parse(new Date())
       setTimeout(this.countdown, 1000)
+      this.submitedAnswer = true
     },
     doPostRequest: function () {
       if (this.score > 10) {
@@ -372,12 +384,13 @@ article {
   position: relative;
   display: flex;
   width: 100%;
-  height: 10%;
+  height: 7%;
   border-bottom: 1px solid #e7eae0;
   justify-content: center;
   align-items: center;
   background-color: #6443c075;
   border-radius: 10px 10px 0px 0px;
+  margin-bottom: 10px;
 }
 .quiz-title .title {
   position: fixed;
@@ -387,14 +400,14 @@ article {
 .quiz-main {
   display: flex;
   width: 100%;
-  height: 70%;
+  height: 80%;
   flex-flow: column;
   margin: auto;
   overflow-y: scroll;
 }
 
 .quiz-question {
-  margin-top: 1px;
+  margin-top: -9px;
 }
 
 .quiz-question p {

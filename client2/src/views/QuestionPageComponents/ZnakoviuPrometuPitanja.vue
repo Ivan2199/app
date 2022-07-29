@@ -28,10 +28,13 @@
                   v-for="answer_option in question.answerOptions"
                   :key="answer_option.id"
                   :class="select ? check(answer_option) : ''"
-                  @click="selectResponse(answer_option)"
+                  @click="selectResponse(answer_option, question)"
                 >
-                  {{ answer_option.text }}
+                  <lable type="radio"> {{ answer_option.text }}</lable>
                 </li>
+                <button v-if="checked" @click="CorrectOrNot(question)">
+                  Provjeri
+                </button>
               </ul>
             </div>
           </div>
@@ -78,6 +81,7 @@ export default {
   data() {
     return {
       questions: null,
+      answers: [],
       numberOfQuestions: 5,
       questionsStart: true,
       questionsEnd: false,
@@ -85,6 +89,10 @@ export default {
       score: 0,
       next: false,
       returnQ: false,
+      correctAnswers: 0,
+      answerCounter: 0,
+      counter: 1,
+      checked: true,
       a: 0,
       b: 1
     }
@@ -96,11 +104,25 @@ export default {
       .catch((err) => console.log(err.message))
   },
   methods: {
-    selectResponse(value) {
-      this.select = true
-      this.next = true
-      if (value.isCorrect) {
-        this.score++
+    CorrectOrNot() {
+      if (this.answers.length == this.correctAnswers) {
+        this.select = true
+        this.score += 1
+        this.next = true
+        this.checked = false
+      } else if (this.answers.length != this.correctAnswers) {
+        this.select = true
+        this.next = true
+      }
+    },
+    selectResponse(answer, question) {
+      this.correctAnswers = question.correctAnswers
+      if (answer.isCorrect) {
+        this.answers.push(answer.id)
+      } else if (!answer.isCorrect) {
+        this.next = true
+        this.select = true
+        this.checked = false
       }
     },
     check(status) {
@@ -120,8 +142,11 @@ export default {
         this.select = false
         this.next = false
         this.returnQ = true
+        this.answers = []
+        this.checked = true
       } else {
         ;(this.questionsStart = false), (this.questionsEnd = true)
+        this.answers = []
       }
     },
     skipQuestion() {
@@ -133,8 +158,11 @@ export default {
         this.b++
         this.select = false
         this.returnQ = true
+        this.answers = []
+        this.checked = true
       } else {
         ;(this.questionsStart = false), (this.questionsEnd = true)
+        this.answers = []
       }
     },
     returnQuestion() {
@@ -156,6 +184,8 @@ export default {
       this.questionsStart = true
       this.questionsEnd = false
       this.returnQ = false
+      this.answers = []
+      this.checked = true
     }
   }
 }

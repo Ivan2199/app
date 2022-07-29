@@ -1,6 +1,5 @@
 <template>
   <div class="container-page">
-    <img class="picture" src="../../assets/Image02Road.png" />
     <div class="BorderGlow">
       <article>
         <div class="quiz-wrap">
@@ -45,6 +44,9 @@
                 >
                   {{ answer_option.text }}
                 </li>
+                <button v-if="submitedAnswer" @click="CorrectOrNot(question)">
+                  Provjeri
+                </button>
               </ul>
             </div>
           </div>
@@ -94,6 +96,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      answers: [],
       quiz6: null,
       x: 0,
       y: 1,
@@ -107,17 +110,20 @@ export default {
       added: false,
       status: '',
       crossroads: false,
-      deadline: new Date(new Date().getTime() + 0.1 * 60000),
+      deadline: new Date(new Date().getTime() + 45 * 60000),
       speed: 1000,
       currentTime: Date.parse(this.deadline) - Date.parse(new Date()),
       startTime: Date.parse(new Date()),
       time: true,
-      endTime: ''
+      endTime: '',
+      correctAnswers: 0,
+      checked: false,
+      submitedAnswer: true
     }
   },
   mounted: function () {
     axios
-      .get('http://localhost:8081/quiz/6')
+      .get('http://localhost:8081/quiz/1')
       .then((response) => (this.quiz6 = response.data))
       .catch((error) => console.log(error))
 
@@ -141,25 +147,38 @@ export default {
     }
   },
   methods: {
+    CorrectOrNot(question) {
+      if (this.answers.length == this.correctAnswers) {
+        this.select = true
+        this.score += question.scoreWorth
+        if (question.scoreWorth == 7) {
+          this.crossroads = true
+        }
+        this.next = true
+        this.submitedAnswer = false
+      } else if (this.answers.length != this.correctAnswers) {
+        this.select = true
+        this.next = true
+      }
+    },
     countdown() {
       this.currentTime = Date.parse(this.deadline) - Date.parse(new Date())
       if (this.currentTime > 0) {
         setTimeout(this.countdown, this.speed)
       } else {
         this.currentTime = null
-        if (!this.added) {
-          this.doPostRequest()
-        }
+        this.doPostRequest()
       }
     },
     selectResponse(answer, question) {
-      this.select = true
-      this.next = true
+      this.correctAnswers = question.correctAnswers
       if (answer.isCorrect) {
-        this.score += question.scoreWorth
-        if (question.scoreWorth == 7) {
-          this.crossroads = true
-        }
+        this.answers.push(answer.id)
+      } else if (!answer.isCorrect) {
+        this.next = true
+        this.select = true
+        this.submitedAnswer = false
+        setTimeout(() => this.nextQuestion(), 2000)
       }
     },
     check(status) {
@@ -177,12 +196,16 @@ export default {
         this.quizEnd = true
         this.quizStart = false
         this.result = this.score
+        this.answers = []
       } else {
         this.x++
         this.y++
+        this.checked = false
         this.select = false
         this.next = false
         this.crossroads = false
+        this.answers = []
+        this.submitedAnswer = true
       }
     },
     skipQuestion() {
@@ -193,10 +216,13 @@ export default {
         this.quizEnd = true
         this.quizStart = false
         this.result = this.score
+        this.answers = []
       } else {
         this.x++
         this.y++
         this.select = false
+        this.answers = []
+        this.submitedAnswer = true
       }
     },
     restartQuiz() {
@@ -211,9 +237,11 @@ export default {
       this.added = false
       this.crossroads = false
       this.time = true
+      this.answers = []
       this.deadline = new Date(new Date().getTime() + 45 * 60000)
       this.currentTime = Date.parse(this.deadline) - Date.parse(new Date())
       setTimeout(this.countdown, 1000)
+      this.submitedAnswer = true
     },
     doPostRequest: function () {
       if (this.score > 10) {
@@ -254,7 +282,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 40%;
+  left: 42.7%;
   border: 2px solid white;
   height: 100%;
   width: 200px;
@@ -267,16 +295,16 @@ article {
   color: white;
   border-collapse: collapse;
   height: 89%;
-  width: 56%;
+  width: 76%;
   margin: 50px 10%;
   position: fixed;
   top: 48%;
-  left: 43%;
+  left: 40%;
   transform: translate(-50%, -50%);
   padding: 30px;
   background: rgb(41, 40, 40);
-  overflow-y: scroll;
   z-index: 11;
+  overflow: hidden;
   border-radius: 25px;
 }
 .BorderGlow::before,
@@ -284,7 +312,7 @@ article {
   content: '';
   position: fixed;
   top: 53.2%;
-  left: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background: linear-gradient(
     45deg,
@@ -304,7 +332,7 @@ article {
     rgb(0, 174, 255)
   );
   background-size: 400%;
-  width: 57%;
+  width: 77%;
   height: 90.5%;
   border-radius: 25px;
   z-index: 10;
@@ -324,14 +352,6 @@ article {
 
 .BorderGlow::after {
   filter: blur(40px);
-}
-
-.picture {
-  position: fixed;
-  top: 6%;
-  left: -10%;
-  overflow: hidden;
-  opacity: 0.5;
 }
 
 ::-webkit-scrollbar {
@@ -370,6 +390,7 @@ article {
   align-items: center;
   background-color: #6443c075;
   border-radius: 10px 10px 0px 0px;
+  margin-bottom: 10px;
 }
 .quiz-title .title {
   position: fixed;
@@ -379,9 +400,10 @@ article {
 .quiz-main {
   display: flex;
   width: 100%;
-  height: 70%;
+  height: 80%;
   flex-flow: column;
   margin: auto;
+  overflow-y: scroll;
 }
 
 .quiz-question {
