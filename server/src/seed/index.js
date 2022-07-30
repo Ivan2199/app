@@ -1,36 +1,21 @@
-const {
-  sequelize,
-  Question,
-  AnswerOption,
-  Quiz,
-  QuestionQuiz,
-} = require("../models");
+const { sequelize } = require("../models");
 
-const Promise = require("bluebird");
+const { createQuestion } = require("../services/QuestionService");
+const { addQuiz } = require("../services/QuizService.js");
+const { createUser } = require("../services/UserService.js");
+
 const questions = require("./questions.json");
-const answerOptions = require("./answerOptions.json");
 const quizzes = require("./quizzes.json");
-const questionQuizzes = require("./questionQuizzes.json");
+const users = require("./users.json");
 
 sequelize.sync({ force: true }).then(async function () {
-  await Promise.all(
-    questions.map((question) => {
-      Question.create(question);
-    })
-  );
-  await Promise.all(
-    answerOptions.map((answerOption) => {
-      AnswerOption.create(answerOption);
-    })
-  );
-  await Promise.all(
-    quizzes.map((quiz) => {
-      Quiz.create(quiz);
-    })
-  );
-  await Promise.all(
-    questionQuizzes.map((questionQuiz) => {
-      QuestionQuiz.create(questionQuiz);
-    })
-  );
+  questions.map(async (question) => {
+    await createQuestion(question);
+  });
+  quizzes.map(async (quiz) => {
+    await addQuiz(quiz);
+  });
+  users.map(async (user) => {
+    await createUser(user);
+  });
 });

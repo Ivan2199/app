@@ -1,23 +1,30 @@
 [
-    {
-        "title": "Prvi kviz"
-    },
-    {
-        "title": "Drugi kviz"
-    },
-    {
-        "title": "Treći kviz"
-    },
-    {
-        "title": "Četvrti kviz"
-    },
-    {
-        "title": "Peti kviz"
-    },
-    {
-        "title": "Šesti kviz"
-    },
-    {
-        "title": "Sedmi kviz"
-    }
+  {
+    "id": 1,
+    "title": "Prvi kviz",
+    "questions": [
+      {
+        "id": 1,
+        "sequenceNumber": 1
+      },
+      {
+        "id": 2,
+        "sequenceNumber": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Drugi kviz",
+    "questions": [
+      {
+        "id": 3,
+        "sequenceNumber": 1
+      },
+      {
+        "id": 4,
+        "sequenceNumber": 2
+      }
+    ]
+  }
 ]
