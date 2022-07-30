@@ -3,9 +3,12 @@ const {
   serializeQuestion,
   serializeQuestionList,
 } = require("../schemas/question");
-// req.body
-// req.query
-// req.params
+
+const {
+  createQuestion,
+  fetchQuestion,
+  fetchAllQuestions,
+} = require("../services/QuestionService");
 
 const allowedCategories = {
   PropisiuCestovnomPrometu: "PropisiuCestovnomPrometu",
@@ -51,32 +54,25 @@ module.exports = {
         .status(400)
         .json({ message: `You have sent a non-allowed category: ${category}` });
     }
-    const question = await Question.create(
-      { id, imageUrl, scoreWorth, text, correctAnswers, videoUrl, category },
+    const question = await createQuestion(
+      {
+        id,
+        imageUrl,
+        scoreWorth,
+        text,
+        correctAnswers,
+        videoUrl,
+        category,
+        answers,
+      },
       { include: AnswerOption }
     );
-    answers.map(async (answer) => {
-      const answerOption = await AnswerOption.create({
-        questionId: question.id,
-        text: answer.text,
-        isCorrect: answer.isCorrect,
-      });
-      return answerOption;
-    });
-    await question.reload();
 
     return res.status(201).json(serializeQuestion(question));
   },
   async getQuestion(req, res) {
     const { id } = req.params;
-
-    const question = await Question.findOne({
-      where: {
-        id: id,
-      },
-      include: AnswerOption,
-    });
-
+    const question = await fetchQuestion(id, { include: AnswerOption });
     if (!question) {
       return res
         .status(404)
@@ -96,7 +92,7 @@ module.exports = {
         category: category,
       };
     }
-    const questions = await Question.findAll(queryParams);
+    const questions = await fetchAllQuestions(queryParams);
 
     return res.status(200).json(serializeQuestionList(questions));
   },

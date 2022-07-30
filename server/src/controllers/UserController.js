@@ -1,8 +1,9 @@
-const { User } = require("../models");
 const jwt = require("jsonwebtoken");
 const config = require("../config/config");
 
 const { serializeUser } = require("../schemas/user");
+
+const { createUser, fetchUser } = require("../services/UserService");
 
 function jwtSignUser(user) {
   const ONE_WEEK = 60 * 60 * 24 * 7;
@@ -16,21 +17,21 @@ module.exports = {
     try {
       const { email, password, name, surname, gender } = req.body;
 
-      const existingUser = await User.findOne({ where: { email: email } });
+      const existingUser = await fetchUser({ where: { email: email } });
+
       if (existingUser) {
         return res.status(409).send({
           error: `User with email ${email} already exists.`,
         });
       }
 
-      const newUser = await User.create({
+      const newUser = await createUser({
         email,
         password,
         name,
         surname,
         gender,
       });
-      console.log(newUser.toJSON());
 
       return res.send(serializeUser(newUser));
     } catch (err) {
@@ -44,7 +45,7 @@ module.exports = {
     try {
       const { email, password } = req.body;
 
-      const user = await User.findOne({
+      const user = await fetchUser({
         where: {
           email: email,
         },
