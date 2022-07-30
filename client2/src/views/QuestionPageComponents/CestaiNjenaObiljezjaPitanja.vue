@@ -14,9 +14,9 @@
           class="question_answer"
           v-show="questionsStart"
         >
-          <div v-if="question.category == 'CestiNjenaObiljezja'">
+          <div v-if="question.category == 'CestaiNjenaObiljezja'">
             <div class="box_question">
-              <p>{{ b }}. {{ question.text }}</p>
+              <p>{{ questionCounter }}. {{ question.text }}</p>
               <img
                 v-if="question.imageUrl"
                 class="question_image"
@@ -29,9 +29,10 @@
                   v-for="answer_option in question.answerOptions"
                   :key="answer_option.id"
                   :class="select ? check(answer_option) : ''"
-                  @click="selectResponse(answer_option, question)"
                 >
-                  <lable type="radio"> {{ answer_option.text }}</lable>
+                  <p @click="selectResponse(answer_option, question)">
+                    {{ answer_option.text }}
+                  </p>
                 </li>
                 <button v-if="checked" @click="CorrectOrNot(question)">
                   Provjeri
@@ -44,7 +45,7 @@
         <div class="box-quizEnd" v-if="questionsEnd">
           <h1 class="theEnd">KRAJ!!</h1>
           <h2>Broj točnih odgovora:</h2>
-          <h2>{{ this.score }}/{{ this.numberOfQuestions }}</h2>
+          <h2>{{ this.score }}/{{ this.currentNumberOfQuestions }}</h2>
           <div class="restart-button">
             <button @click="restartQuestions">Restart</button>
           </div>
@@ -83,7 +84,7 @@ export default {
     return {
       questions: null,
       answers: [],
-      numberOfQuestions: 5,
+      totalNumberOfQuestions: 73,
       questionsStart: true,
       questionsEnd: false,
       select: false,
@@ -94,8 +95,10 @@ export default {
       answerCounter: 0,
       counter: 1,
       checked: true,
-      a: 0,
-      b: 1
+      questionCounter: 1,
+      a: 38,
+      b: 39,
+      currentNumberOfQuestions: 0
     }
   },
   mounted() {
@@ -107,8 +110,11 @@ export default {
   methods: {
     CorrectOrNot() {
       if (this.answers.length == this.correctAnswers) {
+        for (this.answer in this.answers) {
+          alert(this.answer)
+        }
         this.select = true
-        this.score += 1
+        this.score += 10
         this.next = true
         this.checked = false
       } else if (this.answers.length != this.correctAnswers) {
@@ -137,9 +143,10 @@ export default {
       if (!this.next) {
         return
       }
-      if (this.b < this.numberOfQuestions) {
+      if (this.b < this.totalNumberOfQuestions) {
         this.a++
         this.b++
+        this.questionCounter++
         this.select = false
         this.next = false
         this.returnQ = true
@@ -148,15 +155,17 @@ export default {
       } else {
         ;(this.questionsStart = false), (this.questionsEnd = true)
         this.answers = []
+        this.currentNumberOfQuestions = this.questionCounter
       }
     },
     skipQuestion() {
       if (this.next) {
         return
       }
-      if (this.b < this.numberOfQuestions) {
+      if (this.b < this.totalNumberOfQuestions) {
         this.a++
         this.b++
+        this.questionCounter++
         this.select = false
         this.returnQ = true
         this.answers = []
@@ -164,21 +173,25 @@ export default {
       } else {
         ;(this.questionsStart = false), (this.questionsEnd = true)
         this.answers = []
+        this.currentNumberOfQuestions = this.questionCounter
       }
     },
     returnQuestion() {
       if (this.a > 1) {
         this.a--
         this.b--
+        this.score--
+        this.questionCounter--
       } else {
-        this.a = 0
-        this.b = 1
+        this.a = 38
+        this.b = 39
         this.returnQ = false
       }
     },
     restartQuestions() {
-      this.a = 0
-      this.b = 1
+      this.a = 38
+      this.b = 39
+      this.questionCounter = 1
       this.score = 0
       this.next = false
       this.select = false
@@ -187,12 +200,16 @@ export default {
       this.returnQ = false
       this.answers = []
       this.checked = true
+      this.currentNumberOfQuestions = 0
     }
   }
 }
 </script>
 
 <style scoped>
+li p:hover {
+  color: black;
+}
 article {
   display: block;
   color: white;
