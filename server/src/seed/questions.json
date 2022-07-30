@@ -1,22 +1,66 @@
 [
-    {
-        "scoreWorth":2,    
+  {
+    "id": 1,
+    "scoreWorth": 2,
     "text": "Što je kolnik?",
-    "category": "PropisiuCestovnomPrometu"
-},
-{
-    "scoreWorth":2,    
-"text": "Što je kolnička traka?",
-"category": "PropisiuCestovnomPrometu"
-},
-{
-    "scoreWorth":2,    
-"text": "Što je prometna traka?",
-"category": "PropisiuCestovnomPrometu"
-},
-{
-    "scoreWorth":2,    
-"text": "Što je prometna traka za ubrzavanje?",
-"category": "PropisiuCestovnomPrometu"
-}
-] 
+    "category": "PropisiuCestovnomPrometu",
+    "answers": [
+      {
+        "text": "Dio cestovne površine s jednom ili više prometnih traka namijenjen u prvom redu prometu vozila",
+        "isCorrect": true
+      },
+      {
+        "text": "Dio cestovne površine s jednom ili više pješačkih staza namijenjen u prvom redu za promet pješaka",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "scoreWorth": 2,
+    "text": "Što je kolnička traka?",
+    "category": "PropisiuCestovnomPrometu",
+    "answers": [
+      {
+        "text": "Obilježeni ili neobilježeni dio kolnika čija je širina dovoljna za nesmetan promet jednog reda vozila u jednom smjeru",
+        "isCorrect": false
+      },
+      {
+        "text": "Uzdužni dio kolnika s jednom ili više prometnih traka namijenjen za promet vozila u jednom smjeru",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "scoreWorth": 2,
+    "text": "Što je prometna traka?",
+    "category": "PropisiuCestovnomPrometu",
+    "answers": [
+      {
+        "text": "Uzdužni dio kolnika s jednom ili više prometnih traka namijenjen prometu vozila u jednom smjeru",
+        "isCorrect": false
+      },
+      {
+        "text": "Obilježeni ili neobilježeni uzdužni dio kolnika čija je širina dovoljna za nesmetan promet jednog reda motornih vozila u jednom smjeru",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "scoreWorth": 2,
+    "text": "Što je prometna traka za ubrzavanje?",
+    "category": "PropisiuCestovnomPrometu",
+    "answers": [
+      {
+        "text": "Dio kolnika namijenjen isključivo za pretjecanje",
+        "isCorrect": false
+      },
+      {
+        "text": "Dio kolnika namijenjen za uključivanje vozila u prometni tok sa sporedne ceste",
+        "isCorrect": true
+      }
+    ]
+  }
+]

@@ -1,5 +1,11 @@
-const { Quiz, QuestionQuiz, Question, AnswerOption } = require("../models");
+const { Question, AnswerOption } = require("../models");
 const { serializeQuiz, serializeQuizList } = require("../schemas/quiz");
+
+const {
+  addQuiz,
+  fetchQuiz,
+  fetchAllQuizzes,
+} = require("../services/QuizService.js");
 
 module.exports = {
   async createQuiz(req, res) {
@@ -14,37 +20,27 @@ module.exports = {
       }
     }
 
-    const quiz = await Quiz.create(
-      { title },
+    const quiz = await addQuiz(
+      { title, questions },
       { include: [{ model: Question, include: { model: AnswerOption } }] }
     );
-
-    questions.map(async (question) => {
-      const questionQuiz = await QuestionQuiz.create({
-        quizId: quiz.id,
-        questionId: question.id,
-        sequenceNumber: question.sequenceNumber,
-      });
-      return questionQuiz;
-    });
-
-    await quiz.reload();
 
     return res.status(201).json(serializeQuiz(quiz));
   },
   async getQuiz(req, res) {
     const { id } = req.params;
 
-    const quiz = await Quiz.findByPk(id, {
+    const quiz = await fetchQuiz(id, {
       include: [{ model: Question, include: { model: AnswerOption } }],
     });
+
     if (!quiz) {
       return res.status(404).json({ message: `Quiz by ID ${id} not found!!` });
     }
     return res.status(200).json(serializeQuiz(quiz));
   },
   async getQuizzes(req, res) {
-    const quizzes = await Quiz.findAll({
+    const quizzes = await fetchAllQuizzes({
       include: [{ model: Question, include: { model: AnswerOption } }],
     });
     return res.status(200).json(serializeQuizList(quizzes));
