@@ -9,11 +9,11 @@
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in sliceItems(16, 27)"
+          v-for="(question, index) in sliceItems(143, 167)"
           :key="question.id"
           class="question_answer"
         >
-          <div v-if="question.category == 'OstaliSudioniciuPrometu'">
+          <div v-if="question.category == 'OstaliSudioniciuCestovnomPrometu'">
             <div class="question">
               {{ index + 1 }}. {{ question.text }}
               <br />

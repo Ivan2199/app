@@ -84,7 +84,7 @@ export default {
     return {
       questions: null,
       answers: [],
-      totalNumberOfQuestions: 73,
+      totalNumberOfQuestions: 72,
       questionsStart: true,
       questionsEnd: false,
       select: false,
@@ -96,8 +96,8 @@ export default {
       counter: 1,
       checked: true,
       questionCounter: 1,
-      a: 38,
-      b: 39,
+      a: 37,
+      b: 38,
       currentNumberOfQuestions: 0
     }
   },
@@ -110,11 +110,8 @@ export default {
   methods: {
     CorrectOrNot() {
       if (this.answers.length == this.correctAnswers) {
-        for (this.answer in this.answers) {
-          alert(this.answer)
-        }
         this.select = true
-        this.score += 10
+        this.score += 1
         this.next = true
         this.checked = false
       } else if (this.answers.length != this.correctAnswers) {
@@ -183,14 +180,14 @@ export default {
         this.score--
         this.questionCounter--
       } else {
-        this.a = 38
-        this.b = 39
+        this.a = 37
+        this.b = 38
         this.returnQ = false
       }
     },
     restartQuestions() {
-      this.a = 38
-      this.b = 39
+      this.a = 37
+      this.b = 38
       this.questionCounter = 1
       this.score = 0
       this.next = false

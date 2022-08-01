@@ -84,7 +84,7 @@ export default {
     return {
       questions: null,
       answers: [],
-      numberOfQuestions: 38,
+      numberOfQuestions: 37,
       questionsStart: true,
       questionsEnd: false,
       select: false,
@@ -97,8 +97,8 @@ export default {
       checked: true,
       questionCounter: 1,
       currentNumberOfQuestions: 0,
-      a: 1,
-      b: 2
+      a: 0,
+      b: 1
     }
   },
   mounted() {
@@ -110,9 +110,6 @@ export default {
   methods: {
     CorrectOrNot() {
       if (this.answers.length == this.correctAnswers) {
-        for (this.answer in this.answers) {
-          alert(this.answer)
-        }
         this.select = true
         this.score += 1
         this.next = true
@@ -183,14 +180,14 @@ export default {
         this.score--
         this.questionCounter--
       } else {
-        this.a = 1
-        this.b = 2
+        this.a = 0
+        this.b = 1
         this.returnQ = false
       }
     },
     restartQuestions() {
-      this.a = 1
-      this.b = 2
+      this.a = 0
+      this.b = 1
       this.questionCounter = 1
       this.score = 0
       this.next = false

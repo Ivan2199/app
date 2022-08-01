@@ -9,7 +9,7 @@
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in sliceItems(38, 73)"
+          v-for="(question, index) in sliceItems(37, 72)"
           :key="question.id"
           class="question_answer"
         >

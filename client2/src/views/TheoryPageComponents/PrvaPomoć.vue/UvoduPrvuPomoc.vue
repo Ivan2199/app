@@ -9,7 +9,7 @@
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in sliceItems(2, 3)"
+          v-for="(question, index) in sliceItems(456, 459)"
           :key="question.id"
           class="question_answer"
         >
@@ -29,11 +29,7 @@
                 :key="answer_option.id"
                 class="answers"
               >
-                <div v-if="answer_option.isCorrect" class="True">
-                  {{ answer_option.text }}
-                  <br />
-                </div>
-                <div v-else class="notTrue">
+                <div class="answer">
                   {{ answer_option.text }}
                   <br />
                 </div>
@@ -142,8 +138,8 @@ article {
   background: rgba(80, 79, 79, 0.444);
   border-radius: 25px;
 }
-.notTrue {
-  max-height: 120px;
+.answer {
+  max-height: 90%;
   font-size: 20px;
   margin: 10px;
   padding: 10px;
@@ -151,16 +147,7 @@ article {
   text-align: center;
   justify-items: center;
 }
-.True {
-  max-height: 120px;
-  font-size: 20px;
-  background-color: green;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 15px;
-  justify-items: center;
-}
+
 ::-webkit-scrollbar {
   width: 9px;
 }
