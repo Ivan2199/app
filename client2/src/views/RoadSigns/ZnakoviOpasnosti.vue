@@ -1,30 +1,32 @@
 <template>
   <div class="container">
     <img class="picture" src="../../assets/Image02Road.png" />
-    <div class="BorderGlow">
-      <article>
-        <div
-          v-for="dangerSign in sliceItems(0, 2)"
-          :key="dangerSign.id"
-          class="section"
-        >
-          <div v-if="dangerSign.category == 'PropisiuCestovnomPrometu'">
-            <img
-              v-if="dangerSign.imageUrl"
-              class="dangerSign_image"
-              v-bind:src="dangerSign.imageUrl"
-            />
-            <div class="dangerSignText">
-              <ul>
-                <li>
+
+    <article>
+      <h2 class="dangerSignCategory">Znakovi Opasnosti</h2>
+      <div
+        v-for="dangerSign in sliceItems(0, 34)"
+        :key="dangerSign.id"
+        class="section"
+      >
+        <div v-if="dangerSign.category == 'ZnakoviOpasnosti'">
+          <div class="dangerSign">
+            <ul>
+              <li>
+                <img
+                  v-if="dangerSign.imageUrl"
+                  class="dangerSign_image"
+                  v-bind:src="dangerSign.imageUrl"
+                />
+                <p class="DescriptionOfSign">
                   {{ dangerSign.text }}
-                </li>
-              </ul>
-            </div>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
   </div>
 </template>
 
@@ -55,64 +57,34 @@ article {
   display: block;
   color: white;
   border-collapse: collapse;
-  height: 89%;
-  width: 56%;
+  height: 80%;
+  width: 66%;
   margin: 50px 10%;
   position: fixed;
   top: 48%;
-  left: 60%;
+  left: 43%;
   transform: translate(-50%, -50%);
   padding: 30px;
-  background: rgb(41, 40, 40);
+  background: rgba(112, 108, 108, 0.842);
   overflow-y: scroll;
   z-index: 11;
   border-radius: 25px;
 }
-.BorderGlow::before,
-.BorderGlow::after {
-  content: '';
-  position: fixed;
-  top: 53.2%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    45deg,
-    rgb(0, 174, 255),
-    #0059ff,
-    #1100ff,
-    #580dd0,
-    #8809ff,
-    #6e0dd0,
-    #c10cc7,
-    #c10cc7,
-    #6e0dd0,
-    #8809ff,
-    #580dd0,
-    #1100ff,
-    #0059ff,
-    rgb(0, 174, 255)
-  );
-  background-size: 400%;
-  width: 57%;
-  height: 90.5%;
-  border-radius: 25px;
-  z-index: 10;
-  animation: animate 70s linear infinite;
+.dangerSign_image {
+  position: relative;
+  max-width: 300px;
+  float: left;
+  border-radius: 15px;
 }
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+::-webkit-scrollbar {
+  width: 9px;
 }
 
-.BorderGlow::after {
-  filter: blur(40px);
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-collapse: collapse;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .section {
   position: relative;
@@ -120,7 +92,7 @@ article {
   font-size: 30px;
   margin: 10px;
   padding: 10px;
-  background: rgba(80, 79, 79, 0.444);
+  background: rgb(41, 40, 40);
   border-radius: 25px;
 }
 
@@ -136,23 +108,27 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
   flex-flow: column;
+  justify-content: center;
 }
-
-li {
+li .DescriptionOfSign {
+  width: 70%;
   background: rgb(37, 37, 37);
   font-size: 20px;
   padding: 10px;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.5s;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
   list-style: none;
   line-height: 2;
   border: 1px solid #cdd2d2;
-  margin: 10px;
+  margin: auto;
   border-radius: 15px;
   cursor: pointer;
   transition: 0.3s;
+  float: right;
 }
 .picture {
   position: fixed;
@@ -161,8 +137,8 @@ li {
   overflow: hidden;
   opacity: 0.5;
 }
-.dangerSign_image {
-  position: relative;
-  max-width: 500px;
+.dangerSignCategory {
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 </style>

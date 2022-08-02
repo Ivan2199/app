@@ -25,14 +25,13 @@
           >
             <div class="quiz-question">
               <h2>Question {{ y }}/{{ quiz1.questions.length }}</h2>
+              <h1>{{ question.text }}</h1>
               <img
                 v-if="question.imageUrl"
                 class="question_image"
                 v-bind:src="question.imageUrl"
               />
-              <p>
-                {{ question.title }} Broj bodova - {{ question.scoreWorth }}
-              </p>
+              <p>Broj bodova - {{ question.scoreWorth }}</p>
             </div>
             <div class="question-suggestions">
               <ul>
@@ -56,11 +55,11 @@
               <h2>Broj bodova:</h2>
               <p>{{ score }}</p>
             </div>
-            <div class="pass" v-if="score > 10">
+            <div class="pass" v-if="score > 108">
               <p class="pass" v-if="crossroads">Prolaz</p>
-              <p class="fail" v-else>Pad</p>
+              <p class="fail" v-else-if="!crossroads">Pad(raskrizje)</p>
             </div>
-            <div class="fail" v-else-if="score < 10">Pad</div>
+            <div class="fail" v-else-if="score < 108">Pad</div>
 
             <div class="restart-button">
               <button @click="restartQuiz">Ponovno</button>
@@ -109,7 +108,7 @@ export default {
       equalIds: 0,
       added: false,
       status: '',
-      crossroads: false,
+      crossroads: true,
       deadline: new Date(new Date().getTime() + 45 * 60000),
       speed: 1000,
       currentTime: Date.parse(this.deadline) - Date.parse(new Date()),
@@ -151,9 +150,6 @@ export default {
       if (this.answers.length == this.correctAnswers) {
         this.select = true
         this.score += question.scoreWorth
-        if (question.scoreWorth == 7) {
-          this.crossroads = true
-        }
         this.next = true
         this.submitedAnswer = false
       } else if (this.answers.length != this.correctAnswers) {
@@ -175,6 +171,10 @@ export default {
       if (answer.isCorrect) {
         this.answers.push(answer.id)
       } else if (!answer.isCorrect) {
+        if (question.scoreWorth == 7) {
+          this.crossroads = false
+          alert(this.crossroads)
+        }
         this.next = true
         this.select = true
         this.submitedAnswer = false
@@ -203,7 +203,6 @@ export default {
         this.checked = false
         this.select = false
         this.next = false
-        this.crossroads = false
         this.answers = []
         this.submitedAnswer = true
       }
@@ -235,7 +234,7 @@ export default {
       this.score = 0
       this.result = 0
       this.added = false
-      this.crossroads = false
+      this.crossroads = true
       this.time = true
       this.answers = []
       this.deadline = new Date(new Date().getTime() + 45 * 60000)
@@ -244,13 +243,13 @@ export default {
       this.submitedAnswer = true
     },
     doPostRequest: function () {
-      if (this.score > 10) {
+      if (this.score > 108) {
         if (this.crossroads) {
           this.status = 'Prolaz'
         } else {
           this.status = 'Pad'
         }
-      } else if (this.score < 10) {
+      } else if (this.score < 108) {
         this.status = 'Pad'
       }
       this.result = this.score
@@ -395,7 +394,7 @@ article {
 .quiz-title .title {
   position: fixed;
   display: flex;
-  left: 42%;
+  left: 44%;
 }
 .quiz-main {
   display: flex;
@@ -409,8 +408,11 @@ article {
 .quiz-question {
   margin-top: -9px;
 }
-
+.quiz-question h1 {
+  margin-top: 30px;
+}
 .quiz-question p {
+  font-size: 15px;
   margin-top: 20px;
 }
 
@@ -443,6 +445,17 @@ li {
 li:hover {
   transform: scale(1.1);
   background-color: #e7eae0;
+}
+ul button {
+  margin-bottom: 15px;
+}
+ul button:hover {
+  transform: scale(0.9);
+  background-color: #e7eae0;
+  color: black;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
 }
 
 .footer-quiz {

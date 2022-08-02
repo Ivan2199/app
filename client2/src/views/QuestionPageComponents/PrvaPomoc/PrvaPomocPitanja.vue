@@ -2,9 +2,8 @@
   <div class="container">
     <img class="picture" src="../../../assets/Image02Road.png" />
     <h1>
-      Ozljede<br />
-      Kostiju i<br />
-      Zglobova
+      Prva<br />
+      Pomoć
     </h1>
     <div class="BorderGlow">
       <article>
@@ -14,25 +13,25 @@
           class="question_answer"
           v-show="questionsStart"
         >
-          <div v-if="question.category == 'OzljedeKostijuiZglobova'">
+          <div v-if="question.category == 'PrvaPomoc'">
             <div class="box_question">
               <p>{{ x }}. {{ question.text }}</p>
-              <img
-                v-if="question.imageUrl"
-                class="question_image"
-                v-bind:src="question.imageUrl"
-              />
             </div>
             <div class="box_suggestions">
               <ul>
+                <button v-if="!hideButton" @click="displayAnswer()">
+                  Prikaži Odgovor
+                </button>
+                <section v-if="showAnswer" class="question_image">
+                  <video-embed v-bind:src="question.videoUrl"></video-embed>
+                </section>
                 <li
                   v-for="answer_option in question.answerOptions"
                   :key="answer_option.id"
                 >
-                  <button v-if="!hideButton" @click="displayAnswer()">
-                    Prikaži Odgovor
-                  </button>
-                  <p v-if="showAnswer">{{ answer_option.text }}</p>
+                  <div class="answer" v-if="showAnswer">
+                    {{ answer_option.text }}
+                  </div>
                 </li>
               </ul>
             </div>
@@ -74,19 +73,21 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import Embed from 'v-video-embed'
 export default {
   data() {
     return {
       questions: null,
-      numberOfQuestions: 5,
+      numberOfQuestions: 487,
       questionsStart: true,
       questionsEnd: false,
       next: false,
       returnQ: false,
       showAnswer: false,
       hideButton: false,
-      a: 2,
-      b: 3,
+      a: 456,
+      b: 457,
       x: 1
     }
   },
@@ -95,6 +96,8 @@ export default {
       .then((res) => res.json())
       .then((data) => (this.questions = data))
       .catch((err) => console.log(err.message))
+
+    Vue.use(Embed)
   },
   methods: {
     nextQuestion() {
@@ -140,8 +143,8 @@ export default {
         this.showAnswer = false
         this.hideButton = false
       } else {
-        this.a = 2
-        this.b = 3
+        this.a = 456
+        this.b = 457
         this.x = 1
         this.returnQ = false
         this.showAnswer = false
@@ -149,8 +152,8 @@ export default {
       }
     },
     restartQuestions() {
-      this.a = 2
-      this.b = 3
+      this.a = 456
+      this.b = 457
       this.x = 1
       this.next = false
       this.questionsStart = true
@@ -169,6 +172,16 @@ export default {
 </script>
 
 <style scoped>
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  left: 25%;
+  transform: translate(-50%);
+}
+
 article {
   display: block;
   color: white;
@@ -243,7 +256,6 @@ article {
 }
 
 .box_suggestions {
-  margin-top: 70px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -251,32 +263,33 @@ article {
 
 ul {
   display: flex;
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(37, 37, 37);
+  border-radius: 15px;
+}
+ul button:hover {
+  transform: scale(0.7);
+  background-color: #e7eae0;
+  color: black;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
 }
 
 li {
-  background: rgb(37, 37, 37);
   font-size: 20px;
   padding: 10px;
   justify-items: center;
-  transition: transform 0.5s;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
   list-style: none;
   line-height: 2;
-  border: 1px solid #cdd2d2;
   margin: 10px;
-  border-radius: 15px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-li:hover {
-  transform: scale(1.1);
-  background-color: #e7eae0;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.835);
 }
 
 .box-button {
@@ -312,11 +325,11 @@ li:hover {
 }
 h1 {
   color: #ffffff;
-  font-size: 120px;
+  font-size: 105px;
   font-weight: 500;
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 35%;
+  left: 13%;
 }
 .theEnd {
   font-size: 70px;

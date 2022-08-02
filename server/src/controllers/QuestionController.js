@@ -23,14 +23,7 @@ const allowedCategories = {
   VoznjaIzvanNaselja: "VoznjaIzvanNaselja",
   PostupakuSlucajuPrometneNesrece: "PostupakuSlucajuPrometneNesrece",
   VoznjauPosebnimUvjetima: "VoznjauPosebnimUvjetima",
-  UvoduPrvuPomoc: "UvoduPrvuPomoc",
-  PostupaksUnesrecenomOsobom: "PostupaksUnesrecenomOsobom",
-  GubitakSvijesti: "GubitakSvijesti",
-  Krvarenje: "Krvarenje",
-  OzljedeiRane: "OzljedeiRane",
-  OzljedeKostijuiZglobova: "OzljedeKostijuiZglobova",
-  AkcidentalnaStanja: "AkcidentalnaStanja",
-  NagloNastupajucaStanja: "NagloNastupajucaStanja",
+  PrvaPomoc: "PrvaPomoc",
 };
 
 module.exports = {

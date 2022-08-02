@@ -1,8 +1,9 @@
 [
   {
-    "email": "123123s34@gmail.com",
-    "password": "test1231231234",
-    "name": "Test",
-    "surname": "Testsurname2"
+    "email": "ivan@gmail.com",
+    "password": "260moroh",
+    "name": "Ivan",
+    "surname": "Janković",
+    "gender": "Muško"
   }
 ]

@@ -326,7 +326,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/76F9hc0.jpg",
     "text": "Što prikazuje situacija kao na slici?",
@@ -389,7 +389,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/VhZKjyq.jpg",
     "text": "Što prikazuje situacija na slici?",
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/Bzn9bx0.jpg",
     "text": "Vozite u situaciji kao što je prikazana na slici. Na kojeg sudionika prometa ste naišli?",
@@ -515,7 +515,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "text": "Koja vozila spadaju u B kategoriju?",
     "category": "PropisiuCestovnomPrometu",
@@ -841,7 +841,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "text": "Što karakterizira brzu cestu?",
     "category": "CestaiNjenaObiljezja",
@@ -851,7 +851,7 @@
         "isCorrect": true
       },
       {
-        "text": "jedna ili dvije razdvojene kolničke trake",
+        "text": "raskrižja s poprečnim cestama u dvije ili više razina",
         "isCorrect": true
       },
       {
@@ -943,7 +943,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/qW3BAhw.jpg",
     "text": "O čemu morate voditi računa ako se nađete u situaciji prikazanoj na slici?",
@@ -1088,7 +1088,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "text": "O čemu ovisi duljina puta reagiranja?",
     "category": "CestaiNjenaObiljezja",
@@ -1128,7 +1128,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "text": "Što je vrijeme reagiranja?",
     "category": "CestaiNjenaObiljezja",
@@ -1144,7 +1144,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "text": "Što može povećati pozornost vozača za vrijeme vožnje?",
     "category": "CestaiNjenaObiljezja",
@@ -1267,7 +1267,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/YdVNcm5.jpg",
     "text": "Zbog čega vozač za vožnje autocestom u situaciji kao na slici mora naročito paziti na razmak od vozila ispred?",
@@ -1330,7 +1330,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/T2zzro5.jpg",
     "text": "Kako ćete postupiti u situaciji prikazanoj na slici?",
@@ -1406,7 +1406,7 @@
 
 
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "text": "Na čemu se mora temeljiti ponašanje sudionika u prometu?",
     "category": "PonasanjeSudionikauPrometu",
@@ -1528,7 +1528,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "text": "Prema kojim se sudionicima u prometu vozač ne smije bez opreza pouzdati  u načelo povjerenja?",
     "category": "PonasanjeSudionikauPrometu",
@@ -1669,7 +1669,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/iD0WOCr.jpg",
     "text": "Vozite autocestom kao u situaciji na slici. Koja vam opasnost prijeti?",
@@ -1753,7 +1753,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":3,
     "imageUrl":"https://i.imgur.com/Dvlg9o3.jpg",
     "text": "Vozite cestom kao situaciji na slici. Koja je opasnost moguća?",
@@ -1894,7 +1894,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":1,
     "text": "Kolika je dopuštena količina alkohola u organizmu tijekom upravljanja vozilom za vozača vozila A1, A2, A, B i BE kategorije?",
     "category": "PonasanjeSudionikauPrometu",
@@ -1954,7 +1954,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/fUHAVkE.png",
     "text": "Čemu služi uređaj na slici?",
@@ -1975,7 +1975,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "text": "Kako se ponaša vozač koji upravlja vozilom u prometu pod utjecajem droga?",
     "category": "PonasanjeSudionikauPrometu",
@@ -2247,7 +2247,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/oF5La0T.png",
     "text": "Kako ćete postupiti kad naiđete na ovaj prometni znak?",
@@ -2289,7 +2289,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/X9GrGmq.png",
     "text": "Kako ćete postupiti kad naiđete na ovaj prometni znak?",
@@ -2352,7 +2352,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/75u5QDu.png",
     "text": "Na koju opasnost vas upozorava ovaj prometni znak?",
@@ -2381,7 +2381,7 @@
     "answers": [
       {
         "text": "na jak bočni vjetar na udaljenosti 600 metara od prometnog znaka",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "na jak bočni vjetar u duljini 600 metara od prometnog znaka",
@@ -2474,7 +2474,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":1,
     "text": "Gdje se na cesti postavljaju prometni znakovi izričitih naredaba?",
     "category": "ZnakoviuPrometu",
@@ -2570,7 +2570,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/oU7FQhn.png",
     "text": "Što se mora učiniti pri nailasku na ovaj prometni znak?",
@@ -2675,7 +2675,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/RuCqTwV.png",
     "text": "Na što ukazuje ovaj prometni znak s dopunskom pločom?",
@@ -2717,7 +2717,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/kZs5HJu.png",
     "text": "Kako ćete postupiti kad naiđete na ovaj prometni znak?",
@@ -2814,7 +2814,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/TkXKCMV.jpg",
     "text": "Kako treba postupiti vozač u situaciji prikazanoj na slici?",
@@ -2831,7 +2831,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/KLCL4sQ.png",
     "text": "Kako ćete postupiti pri nailasku na ovaj prometni znak ako pješaci namjeravaju prijeći kolnik?",
@@ -2880,7 +2880,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/KCfpjCH.jpg",
     "text": "Vozite cestom u situaciji kao što je prikazana na slici. Kako ćete postupiti?",
@@ -3119,7 +3119,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "text": "Kakvo ponašanje djece možete očekivati u prometu na cesti?",
     "category": "OstaliSudioniciuCestovnomPrometu",
@@ -3222,7 +3222,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/NAZCbrw.jpg",
     "text": "Vozite automobil cestom kao u situaciji na slici. Kako ćete postupiti?",
@@ -3326,7 +3326,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/oFBj3Gf.png",
     "text": "Vozeći cestom naišli ste na ovaj prometni znak. Kako ćete postupiti?",
@@ -3475,7 +3475,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":1,
     "text": "Što se događa sa širinom vidnog polja pri povećanju brzine?",
     "category": "UocavanjePrometnihUvjetaiSituacija",
@@ -3617,7 +3617,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "text": "O čemu ovisi kvaliteta percepcije prometnog znaka?",
     "category": "UocavanjePrometnihUvjetaiSituacija",
@@ -3721,7 +3721,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/3q5BkrQ.jpg",
     "text": "Kako vozač tijekom vožnje treba postupiti u situaciji prikazanoj na slici?",
@@ -3784,7 +3784,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/fm1mlS8.jpg",
     "text": "Što najčešće dovodi do pogrešne procjene brzine tijekom vožnje u situaciji prikazanoj na slici?",
@@ -3846,7 +3846,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/hWwRpm2.jpg",
     "text": "Što bi u situaciji prikazanoj na slici mogao tijekom vožnje očekivati vozač vozila  ispred?",
@@ -3929,7 +3929,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":3,
     "imageUrl":"https://i.imgur.com/GRb86WP.jpg",
     "text": "Kako treba postupiti vozač vozila da bi pravodobno uočio prometnu situaciju tijekom vožnje u situaciji prikazanoj na slici?",
@@ -4012,7 +4012,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "imageUrl":"https://i.imgur.com/Vc9L4X4.jpg",
     "text": "Što može utjecati na smanjenje uočavanja prometne situacije tijekom vožnje u tunelu?",
@@ -4070,7 +4070,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":3,    
     "correctAnswers":2,
     "text": "S čime mora računati vozač za vožnje noću?",
     "category": "UocavanjePrometnihUvjetaiSituacija",
@@ -4368,7 +4368,7 @@
     ]
   },
   {
-    "scoreWorth":2,    
+    "scoreWorth":4,    
     "correctAnswers":1,
     "imageUrl":"https://i.imgur.com/WsokdUU.jpg",
     "text": "Sustigli ste vozilo kao u situaciji prikazanoj na slici. Kako se u toj situaciji kreće vozač vozila ispred?",
@@ -4473,7 +4473,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/mAnNjK0.jpg",
   "text": "Zašto vozači u situaciji prikazanoj na slici za kretanje vozila mogu koristiti prometnu traku koja se ne prostire uz desni rub kolničke trake?",
@@ -4618,7 +4618,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "text": "Što vozač mora uključiti na vozilu za vrijeme kretanja unatrag?",
   "category": "PrometnaPravila",
@@ -5038,7 +5038,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "text": "Kako ćete postupiti na raskrižju cesta iste važnosti?",
   "category": "PrometnaPravila",
@@ -6068,7 +6068,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/DwdZejH.png",
   "text": "Kako ćete postupiti kada se tijekom vožnje na instrumentnoj ploči upali žaruljica prikazana na slici?",
@@ -6109,7 +6109,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":2,
   "text": "Što od navedenog morate imati kao obveznu opremu u osobnom automobilu?",
   "category": "VozilouFunkcijiSigurnostiPrometa",
@@ -6271,7 +6271,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/1l0do7N.png",
   "text": "Što označuje žaruljica na instrumentnoj ploči sa simbolom prikazanim na slici?",
@@ -6292,7 +6292,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/0fb4TyP.png",
   "text": "Što označuje žaruljica na instrumentnoj ploči sa simbolom prikazanim na slici?",
@@ -6354,7 +6354,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "text": "Koliko metara ceste mora osvijetliti svjetlosni snop dugog svjetla ispred vozila noću? ",
   "category": "VozilouFunkcijiSigurnostiPrometa",
@@ -6516,7 +6516,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "text": "Čemu služe pokazivači smjera na motornom vozilu?",
   "category": "VozilouFunkcijiSigurnostiPrometa",
@@ -6593,7 +6593,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "text": "Koja je uloga uređaja za zaustavljanje na motornom vozilu?",
   "category": "VozilouFunkcijiSigurnostiPrometa",
@@ -6973,7 +6973,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/DX8qJbY.jpg",
   "text": "Koje opasnosti možete predvidjeti za vožnje kao u situaciji kao što je prikazana na slici?",
@@ -7078,7 +7078,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/YGVWWDK.jpg",
   "text": "Kada se vozilom isključujete iz raskrižja s kružnim tokom prometa, kako ćete upozoriti druge sudionike u prometu?",
@@ -7183,7 +7183,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/zHByogy.jpg",
   "text": "Vozite krajnjom lijevom prometnom trakom i želite na raskrižju skrenuti ulijevo kao u situaciji prikazanoj na slici. Kako ćete postupiti?",
@@ -7221,7 +7221,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/y4JS03F.jpg",
   "text": "Prema položaju automobila ispred vas na prometnoj traci kako bi trebao postupiti vozač tog automobila u situaciji prikazanoj na slici?",
@@ -7533,7 +7533,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/g7lEFF3.jpg",
   "text": "Koje opasnosti prijete u vožnji na cesti izvan naselja u situaciji prikazanoj na slici?",
@@ -7760,7 +7760,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/RZDoCmP.jpg",
   "text": "O čemu morate voditi računa ako se vozilom uključujete u promet na cestu izvan naselja?",
@@ -7925,7 +7925,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/Ms4LCJq.jpg",
   "text": "Koliki razmak ste, u pravilu,  dužni držati kada vozite iza drugog vozila ako je kolnik sklizak?",
@@ -8173,7 +8173,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":4,    
   "correctAnswers":2,
   "text": "Što ne smijete činiti kada naiđete na kolonu vozila?",
   "category": "VoznjaIzvanNaselja",
@@ -8399,7 +8399,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":1,
   "imageUrl":"https://i.imgur.com/Dexe4l6.jpg",
   "text": "Čime se obilježava mjesto prometne nesreće?",
@@ -8534,7 +8534,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":3,
   "imageUrl":"https://i.imgur.com/D6CiE4G.jpg",
   "text": "Što je prometna nesreća?",
@@ -8913,7 +8913,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "imageUrl":"https://i.imgur.com/X2pscid.jpg",
   "text": "Vozite autocestom kao u situaciji prikazanoj na slici. Kako ćete postupiti?",
@@ -9119,7 +9119,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":3,
   "text": "Koje opasnosti su moguće tijekom vožnje cestom zbog kolotraga na kolniku?",
   "category": "VoznjauPosebnimUvjetima",
@@ -9139,7 +9139,7 @@
   ]
 },
 {
-  "scoreWorth":2,    
+  "scoreWorth":3,    
   "correctAnswers":2,
   "text": "Što se smatra zimskim uvjetima na cesti?",
   "category": "VoznjauPosebnimUvjetima",
@@ -9330,7 +9330,7 @@
 
   {
     "text": "Što je prva pomoć?",
-    "category": "UvoduPrvuPomoc",
+    "category": "PrvaPomoc",
     "answers": [
       {
         "text": "Prva pomoć je skup postupaka kojima se pomaže ozlijeđenoj ili iznenada oboljeloj osobi na mjestu događaja, prije dolaska hitne medicinske službe ili drugih kvalificiranih zdravstvenih djelatnika."
@@ -9339,7 +9339,7 @@
   },
   {
     "text": "Kako se kod osobe provjerava stanje svijesti?",
-    "category": "UvoduPrvuPomoc",
+    "category": "PrvaPomoc",
     "answers": [
       {
         "text": "Stanje svijesti se provjerava tako da osobi nježno protresemo ramena i uputimo glasno i razgovijetno pitanje, npr.: „Čujete li me?“, „Što se dogodilo?“"
@@ -9348,7 +9348,7 @@
   },
   {
     "text": "Kada i kako skidati zaštitnu kacigu?",
-    "category": "UvoduPrvuPomoc",
+    "category": "PrvaPomoc",
     "answers": [
       {
         "text":"Zaštitna kaciga se u pravilu ne skida, a skida se samo:"
@@ -9387,7 +9387,7 @@
   },
   {
     "text": "Koji je postupak u slučaju prometne nesreće",
-    "category": "UvoduPrvuPomoc",
+    "category": "PrvaPomoc",
     "answers": [
       {
         "text": "Postoje četiri koraka koja na mjestu nesreće uvijek treba poduzeti"
@@ -9405,5 +9405,300 @@
         "text": "– pružite potrebnu prvu pomoć"
       }
     ]
+  },
+  {
+    "text": "Opišite postupak prve pomoći kod osobe bez svijesti koja diše",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Osobu treba staviti u bočni položaj kako bi joj održali prohodnost dišnog puta, i omogućili joj nesmetano disanje i spriječili gušenje."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite kako se izvodi postupak vanjske masaže srca",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=3h_ZZ4aG1tE",
+    "answers": [
+      {
+        "text": "– Kleknite pokraj prsnog koša unesrećene osobe"
+      },
+      {
+        "text": "– Stavite korijen (meki jastučasti dio) dlana jedne ruke na sredinu prsne kosti unesrećene osobe. Mjesto pritiska možete odrediti i preko odjeće, ne gubite vrijeme skidanjem košulje, veste ili drugih odjevnih predmeta."
+      },
+      {
+        "text": "– Na tu ruku stavite korijen dlana druge ruke. Isprepletite prste obje ruke. Pazite da vam prsi ne budu odignuti od površine prsnog koša."
+      },
+      {
+        "text": "– Pazite da vam ramena budu postavljena okomito točno u ravnini iznad prsne kosti unesrećene osobe. S ispruženim rukama utisnite prsni koš 5 do 6 cm . Laktovi moraju biti ispruženi, a u trenutku utiskivanja ramena se moraju nalaziti iznad prsne kosti. U takovom položaju možete iskoristiti težinu vlastitog tijela za pritisak koji mora biti kratkotrajan i snažan. Snagu pritiska treba prilagoditi tjelesnoj građi i uzrastu unesrećene osobe."
+      },
+      {
+        "text": "– Nakon svakog pritiska pustite da se prsa potpuno izravnaju. Tako će se krv ponovno vratiti u srce. Ne odvajajte ruke od prsne kosti."
+      },
+      {
+        "text": "– Pritisak mora trajati jednako koliko i otpuštanje pritiska."
+      },
+      {
+        "text": "– Izvršite 30 pritisaka brzinom od 100 do najviše 120 pritisaka u minuti."
+      }
+    ]
+  },
+  {
+    "text": "Opišite postupak prve pomoći kod osobe bez svijesti koja ne diše (postupak oživljavanja).",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=3h_ZZ4aG1tE",
+    "answers": [
+      {
+        "text": "– Kad ustanovite da unesrećena osoba bez svijesti ne diše normalno, odmah pozovite hitnu medicinsku pomoć ili zamolite nekoga drugoga u blizini da to učini"
+      },
+      {
+        "text": "– Započnite oživljavanje s vanjskom masažom srca. Izvršite 30 pritisaka brzinom od 100 do najviše 120 pritisaka u minuti."
+      },
+      {
+        "text": "– Započnite s umjetnim disanjem, primijenite dva upuha zraka. Ne zaboravite koristiti zaštitnu foliju za davanje umjetnog disanja! Prekrijte usta unesrećene osobe zaštitnom folijom za davanje umjetnog disanja."
+      },
+      {
+        "text": "– Nastavite s vanjskom masažom srca i umjetnim disanjem u omjeru 30:2. Nemojte prekidati oživljavanje radi provjere životnih funkcija."
+      },
+      {
+        "text": "– Nastavite oživljavanje sve dok ne dođe kvalificirana osoba i preuzme oživljavanje ili dok se ne premorite. Ako u bilo kojem trenutku unesrećena osoba započne disati, prekinite oživljavanje. Odmah ponovno prvo provjerite svijest, a zatim disanje. Ako je unesrećena osoba i dalje bez svijesti, a diše, postavite je u bočni položaj."
+      }
+    ]
+  },
+  {
+    "text": "Kada će se pristupiti drugom(sekundarnom) pregledu unesrećene osobe i što se njime mora procijeniti?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Sekundarnom pregledu ćemo pristupiti tek nakon što smo primijenili neodgodive postupke prve pomoći ili nakon što smo zbrinuli najteže ozljede na unesrećenoj osobi."
+      },
+      {
+        "text": "Pregled obavite u slijedu od glave prema nogama. Pogledom i opipom potražite sve znakove ozljeda na unesrećenoj osobi. Pitajte osobu za subjektivne znakove kao što su: bol, mučnina, vrtoglavica, opći osjećaj slabosti, trnci, osjećaj žeđi, osjećaj hladnoće, itd. Prilikom pregleda prikupite što više podataka o unesrećenoj osobi: boluje li od koji bolesti, uzima li kakve lijekove, ima li alergija i kad je zadnji put jela i pila."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite zaustavljanje krvarenja kompresivnim zavojem.",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=NhEd5BDPjh0",
+    "answers": [
+      {
+        "text": "Potrebno je na ranu postaviti sterilnu kompresu ili jastučić prvog zavoja, na sterilnu kompresu postaviti kompresivni predmet koji će vršiti pritisak na samu ranu (to može biti drugi smotani zavoj ili priručno sredstvo poput kamena), kompresivni predmet učvrstiti zavojem i po završetku napraviti čvor iznad predmeta koji vrši pritisak. Potrebno je provjeriti cirkulaciju, ako rana i dalje krvari potrebno je staviti dodatnu kompresu i zavoj, pozvati hitnu medicinsku pomoć i staviti osobu u autotransfuzijski položaj."
+      }
+    ]
+  },
+  {
+    "text": "Navedite priručna sredstva za pružanje prve pomoći.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Priručno sredstvo:"
+      },
+      {
+        "text": "2. imobilizacije: novine, daščice, prometni trokut, odjeća"
+      },
+      {
+        "text": "3. previjanja i zaustavljanja krvarenja: bilo koja čista tkanina i odjevni predmeti, itd."
+      }
+    ]
+  },
+  {
+    "text": "Objasnite važnost prepoznavanja i pružanja prve pomoći kod sumnje na ozljedu kralježnice.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Važnost je u tome da se spriječi daljnje ozljeđivanje kralježnice moždine."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite kako se izvodi zavoj šake ili stopala trokutastom maramom.",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=6qrdVZf7E1E",
+    "answers": [
+      {
+        "text": "Položimo šaku/stopalo na maramu tako da su nam prsti u smjeru pravog kuta i na nju stavljamo sterilnu gazu. Zatim pravi kut preklopimo preko šake/stopala i držimo ga na podlaktici/potkoljenici dok preostala dva vrha križamo preko i oko šake/stopala i zavežemo čvor iznad zgloba a pravi kut preklopimo preko čvora i pričvrstimo flasterom."
+      }
+    ]
+  },
+  {
+    "text": "Pri određivanju prioriteta prilikom pružanja prve pomoći, koje ozljede i stanja se zbrinjavaju prve?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Prvo se zbrinjavaju ozljede i stanja koja ugrožavaju život (prestanak disanja, besvjesno stanje, jako krvarenje, ozljede koje mogu dovesti do šoka i šok)."
+      }
+    ]
+  },
+  {
+    "text": "Navedite znakove na temelju kojih ćete posumnjati na ozljedu kralježnice.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Na ozljedu kralježnice treba posumnjati ako je do ozljeđivanja došlo u prometnoj nesreći, pri padu s visine, u tučnjavi, kod skoka na glavu u vodu, pada teškog predmeta na leđa i slično, pogotovo kad je pritom došlo do teže ozljede glave praćene gubitkom svijesti. U pravilu, svaku osobu u besvjesnom stanju kod koje se ozljede nastale na opisani način zbrinjavamo kao da se radi o ozljedi kralježnice. Znakovi: bol u vratu i leđima, rane i nepravilnosti u području leđa, nemogućnost ili otežano pokretanje ruku ili nogu, poremećaj osjeta ili osjećanje trnaca i vrućine u ekstremitetima."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite kako se izvodi zavoj koljena trokutastom maramom.",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=C-Z-tELvolk",
+    "answers": [
+      {
+        "text": "Postavljamo sterilnu gazu na koljeno i zamolimo nekog da nam ju pridrži. Trokutastu maramu stavljamo preko koljena tako da nam je pravi kut usmjeren prema gore. Druga dva vrha zatim križamo iza koljena i vežemo čvor iznad koljena. Pravi kut marame zatim preklapamo preko čvora i osiguramo flasterom."
+      }
+    ]
+  },
+  {
+    "text": "Kako se na siguran način uklanja odjeća i obuća s unesrećene osobe?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Odjeću i obuću uklanjamo s ozlijeđene osobe samo kad sprečavaju primjenu postupaka prve pomoći. Najčešće je dovoljno ukloniti odjeću samo s ozlijeđenog dijela tijela. Kod unesrećene ili naglo oboljele osobe često je potrebno popustiti pritisak tijesno pripijene odjeće. Ako je osoba pri svijesti treba joj objasniti što namjeravamo učiniti te zašto je to potrebno te je zamoliti za pristanak. Odjeća se skida prvo s neozlijeđene strane a potom se lagano povlači kroz ozlijeđenu stranu. Ako je odjeća nagorjela i zalijepila se za tijelo ne smije se skidati već ju je potrebno obrezati škarama."
+      }
+    ]
+  },
+  {
+    "text": "Opišite postupak prve pomoći kod udara struje ili groma.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Struja - osigurati sigurnost pristupa osobi. Voditi računa o vlastitoj sigurnosti. Ako postoji sumnja da strujni krug nije prekinut ne prilaziti već pozvati žurne službe. Provjeriti gdje se nalazi izvor struje i isključiti ga ili odmaknuti s pomoću drvenog štapa. Napraviti prvi pregled. Pozvati hitnu službu. Ako osoba ne diše ili ne diše normalno odmah započeti oživljavanje. Grom - obratiti pažnju na vlastitu sigurnost. Udaljiti sve prisutne. Pozvati hitnu medicinsku službu. Obaviti prvi pregled i po potrebi započeti oživljavanje."
+      }
+    ]
+  }, 
+   {
+    "text": "Pokažite kako se izvodi zavoj lakta trokutastom maramom.",
+    "category": "PrvaPomoc",
+    "videoUrl":"https://www.youtube.com/watch?v=EOWvoukyRDI",
+    "answers": [
+      {
+        "text": "Postavljamo sterilnu gazu na lakat i zamolimo nekog da nam ju pridrži. Trokutastu maramu stavljamo preko lakta tako da nam je pravi kut usmjeren prema gore. Druga dva vrha zatim križamo oko lakta i vežemo čvor iznad zgloba. Pravi kut marame zatim preklapamo preko čvora i osiguramo flasterom."
+      }
+    ]
+  },
+  {
+    "text": "Koji su razlozi za hitno pomicanje unesrećene osobe s mjesta nesreće?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Ako se nalazi u vozilu i: bez svijesti je i ne diše ili ne diše normalno, bez svijesti je i ugrožene su joj životne funkcije, prijeti joj neposredna opasnost koja se ne može kontrolirati ili otkloniti (požar, utapanje, eksplozija), ako joj prijeti opasnost zbog utjecaja hladnoće ili topline, ako je upitno mogu li se primijeniti neodgodivi postupci prve pomoći bez ugrožavanja vlastite sigurnosti."
+      }
+    ]
+  },
+  {
+    "text": "Opišite postupak prve pomoći kod utapanja.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Voditi računa o vlastitoj sigurnosti. Pozvati hitnu medicinsku službu. Provjeriti stanje svijesti i disanje osobe. Ako osoba ne diše normalno započeti s postupkom oživljavanja. Započeti s 5 početnih udaha, a zatim nastaviti pritiscima na prsni koš i umjetnim disanjem u omjeru 30 : 2. Ostati uz unesrećenu osobu i zbrinuti ostale ozljede po prioritetu ako ih ima i pratiti njeno stanje. Spriječiti pothlađivanje skidanjem mokre odjeće i postupnim utopljavanjem."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite kako se izvodi zavoj ramena trokutastom maramom.",
+    "videoUrl":"https://www.youtube.com/watch?v=EOWvoukyRDI",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Stavljamo sterilnu kompresu na rame i preko nje trokutastu maramu tako da je pravi kut na vratu. Zatim druga dva kuta križamo oko pazuha i vežemo čvor ispod ramena. Potom uzimamo drugu trokutastu maramu složenu u kravatu i stavljamo ju na prvu maramu ispod pravog kuta na ozlijeđenoj strani i provlačimo ju ispod zdravog pazuha i vežemo u čvor. Pravi kut prve marame preklapamo preko kravate i osiguramo flasterom."
+      }
+    ]
+  },
+  {
+    "text": "Opišite tehniku hitnog pomicanja unesrećene osobe.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Ako je unesrećena osoba pri svijesti objasnite joj što ćete učiniti i zamolite je za suradnju. Osobi prići s prednje strane i izravnati joj ruke i noge. Kleknuti iza glave osobe, podvući jednu ruku pod vrat, a drugu između lopatica. Pažljivo podizati glavu i ramena i u isto vrijeme približavati svoje tijelo osobi. Podignuti osobi leđa, postaviti je u sjedeći položaj i pridržavati joj ramena. Podvući obje ruke ispod pazuha osobe te jednom rukom obuhvatiti ručni zglob a drugom podlakticu unesrećene osobe. Razmaknuti svoje noge i postaviti se u položaj čučnja, što se više približiti unesrećenoj osobi i izravnati svoja leđa, ruku osobe čvrsto pritisnuti uz njezina prsa. Ustati uspravljenih leđa, podignuti osobu i vući unatrag istovremeno pazeći na prepreke."
+      }
+    ]
+  },
+  {
+    "text": "Koji je postupak prve pomoći kod sunčanice i toplinskog udara?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Sunčanica: Sklonite osobu sa sunca u hlad i rashlađujte je. Stavite oboljeloj osobi hladni oblog(mokru iscijeđenu tkaninu) na glavu. Dajte oboljeloj osobi manju količinu vode ili prirodnog voćnog soka. Ostanite uz osobu i pratite stanje (razinu svijesti, disanje, puls) i po potrebi pozovite hitnu medicinsku službu."
+      },
+      {
+        "text": "Toplinski udar: Osobu smjestiti u hlad i ukloniti joj što više odjeće. Pozvati hitnu medicinsku pomoć. Postaviti osobu u polusjedeći položaj i omotati je hladnom mokrom plahtom dok temperatura mjerena pod pazuhom ne padne na 37,5. Plahtu stalno polijevati vodom da ostane mokra. Ako nemamo plahtu osobu možemo hladiti spužvom namočenom u vodu i stvaranjem umjetnog propuha s pomoću novina ili lepeze. Nakon što se temperatura spusti, vlažnu plahtu zamijeniti suhom. Ostati uz osobu. Ako ima ostalih ozljeda zbrinuti ih po prioritetu i pratiti stanje do dolaska hitne."
+      }
+    ]
+  },
+  {
+    "text": "Koji je postupak prve pomoći kod kratkotrajnog gubitka svijesti?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Provjerite sigurnost pristupa. Kleknite kraj osobe i provjerite svijest tako da joj nježno protresete ramena i uputite glasno i razgovijetno pitanje, primjerice >>Čujete li me?<<, >>Što se dogodilo?<<. Ako je u trenutku provjere osoba već pri svijesti i reagira na Vaš poziv otvaranjem očiju i odgovaranjem na pitanja, ostavite je u zatečenom ležećem položaju. Provjerite ima li ozljeda i zbrinite ih. Otpustite tijesno pripijene odjevne predmete. Ako osoba nema drugih ozljeda, podignite joj noge do visine svojih ramena. Pobrinite se da ima svježeg zraka. Svakako pitajte osobu za moguće postojeće bolesti. Ako se stanje popravlja, pomozite osobi da se postupno podigne. Ako se stanje pogoršava, ako se kratkotrajni gubitak svijesti ponavlja, ako postoji sumnja na probleme sa srcem ili ako besvjesno stanje potraje dulje od dvije minute, pozovite hitnu medicinsku službu, a do njihovog dolaska pružite svu potrebnu prvu pomoć."
+      }
+    ]
+  },
+  {
+    "text": "Koji je postupak prve pomoći kod osobe koja ima vanjsko krvarenje?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Postavite unesrećenu osobu u ležeći položaj. Uklonite odjeću koja pokriva ranu koja krvari. Zaustavite krvarenje izravnim pritiskom na ranu, a kad je to moguće primijenite i kompresivni zavoj kako biste se mogli posvetiti i drugim ozljedama i unesrećenim osobama. Uvijek prvo primijenite izravni pritisak na ranu. Ako je rana koja krvari u području kuka, sjednog dijela, vrata i prepone, to je i jedini način zaustavljanja krvarenja u okviru prve pomoći. Pozvati hitnu medicinsku službu. Ako je krvarenje zaustavljeno i ne postoje druge teže ozljede osobu postavite u autotransfuzijski položaj. Ostati uz osobu..."
+      }
+    ]
+  },
+  {
+    "text": "Pokažite postupak imobilizacije noge.",
+    "videoUrl":"https://www.youtube.com/watch?v=SE0ZUImC7V8",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Neozlijeđena noga se približi ozlijeđenoj i između njih se postavi tkanina. Zatim se oko nogu zavežu trokutaste marame u čvor na neozlijeđenoj nozi. Dvije iznad koljena dvije ispod. I jedna marama se veže u osmicu oko stopala."
+      }
+    ]
+  },
+  {
+    "text": "Kada se ozlijeđena osoba postavlja u autotransfuzijski položaj.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Kod osobe kod koje je potrebno spriječiti razvijanje šoka, ako osoba kratkotrajno izgubi svijest i kad dođe do vanjskog krvarenja."
+      }
+    ]
+  },
+  {
+    "text": "Opišite postupak prve pomoći kod otrovanja ugljičnim monoksidom.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Voditi računa o vlastitoj sigurnosti, prije ulaska u samo vozilo ili prostoriju potrebno ih je prozračiti i omogućiti dovod svježeg zraka, isključiti motor vozila ili uređaje koji funkcioniraju na temelju sagorijevanja, što prije ukloniti osobu iz zagađenog prostora i osigurati joj dovoljno svježeg zraka, pozvati hitnu medicinsku službu, ako je osoba bez svijesti a ne diše započeti oživljavanje, ostati uz osobu..."
+      }
+    ]
+  },
+  {
+    "text": "Opišite kako prepoznati traumatski šok i koji je postupak prve pomoći.",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Blijeda, hladna i vlažna, kasnije sivoplava koža, površno, ubrzano disanje, ubrzan i slab puls, mučnina i povraćanje, slabost i vrtoglavica, žeđ, uznemirenost, agresivnost i gubitak svijesti."
+      }
+    ]
+  },
+  {
+    "text": "Koji se materijali koriste za zbrinjavanje otvorenih ozljeda?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Za zbrinjavanje otvorenih ozljeda se koriste sterilni materijali: gaze, komprese i prvi zavoj."
+      }
+    ]
+  },
+  {
+    "text": "Što se ne smije raditi kod opeklina?",
+    "category": "PrvaPomoc",
+    "answers": [
+      {
+        "text": "Na silu trgati zalijepljenu odjeću, hladiti ledenom vodom, na opeklinu stavljati nekakve kreme, masti, ulja i preparate i bušiti mjehure."
+      }
+    ]
   }
+
 ]
+

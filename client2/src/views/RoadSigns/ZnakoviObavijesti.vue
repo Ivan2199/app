@@ -5,11 +5,11 @@
     <article>
       <h2 class="dangerSignCategory">Znakovi Obavijesti</h2>
       <div
-        v-for="dangerSign in sliceItems(4, 8)"
+        v-for="dangerSign in sliceItems(70, 106)"
         :key="dangerSign.id"
         class="section"
       >
-        <div v-if="dangerSign.category == 'CestaiNjenaObiljezja'">
+        <div v-if="dangerSign.category == 'ZnakoviObavijesti'">
           <div class="dangerSign">
             <ul>
               <li>

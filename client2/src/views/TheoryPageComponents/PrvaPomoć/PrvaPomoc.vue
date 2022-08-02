@@ -2,42 +2,38 @@
   <div class="container">
     <img class="picture" src="../../../assets/Image02Road.png" />
     <h1>
-      Akcidentalna<br />
-      Stanja
+      Prva<br />
+      Pomoć
     </h1>
     <div class="BorderGlow">
       <article>
         <div
-          v-for="(question, index) in sliceItems(16, 27)"
+          v-for="(question, index) in sliceItems(456, 487)"
           :key="question.id"
           class="question_answer"
         >
-          <div v-if="question.category == 'AkcidentalnaStanja'">
+          <div v-if="question.category == 'PrvaPomoc'">
             <div class="question">
               {{ index + 1 }}. {{ question.text }}
+              <section>
+                <video-embed :src="question.videoUrl"></video-embed>
+              </section>
               <br />
-              <img
-                v-if="question.imageUrl"
-                class="question_image"
-                v-bind:src="question.imageUrl"
-              />
             </div>
-            <draggable>
-              <span
-                v-for="answer_option in question.answerOptions"
-                :key="answer_option.id"
-                class="answers"
-              >
-                <div v-if="answer_option.isCorrect" class="True">
-                  {{ answer_option.text }}
-                  <br />
-                </div>
-                <div v-else class="notTrue">
-                  {{ answer_option.text }}
-                  <br />
-                </div>
-              </span>
-            </draggable>
+            <span
+              v-for="answer_option in question.answerOptions"
+              :key="answer_option.id"
+              class="answers"
+            >
+              <div v-if="answer_option.isCorrect" class="True">
+                {{ answer_option.text }}
+                <br />
+              </div>
+              <div v-else class="notTrue">
+                {{ answer_option.text }}
+                <br />
+              </div>
+            </span>
           </div>
         </div>
       </article>
@@ -46,11 +42,9 @@
 </template>
 
 <script>
-import draggable from 'vuedraggable'
+import Vue from 'vue'
+import Embed from 'v-video-embed'
 export default {
-  components: {
-    draggable
-  },
   data() {
     return {
       questions: null
@@ -61,6 +55,8 @@ export default {
       .then((res) => res.json())
       .then((data) => (this.questions = data))
       .catch((err) => console.log(err.message))
+
+    Vue.use(Embed)
   },
   methods: {
     sliceItems: function (start, end) {
@@ -71,6 +67,15 @@ export default {
 </script>
 
 <style scoped>
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50%);
+}
 article {
   display: block;
   color: white;
@@ -141,8 +146,8 @@ article {
   background: rgba(80, 79, 79, 0.444);
   border-radius: 25px;
 }
-.notTrue {
-  max-height: 120px;
+.answers {
+  max-height: 90%;
   font-size: 20px;
   margin: 10px;
   padding: 10px;
@@ -150,16 +155,7 @@ article {
   text-align: center;
   justify-items: center;
 }
-.True {
-  max-height: 120px;
-  font-size: 20px;
-  background-color: green;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 15px;
-  justify-items: center;
-}
+
 ::-webkit-scrollbar {
   width: 9px;
 }
@@ -175,8 +171,8 @@ h1 {
   font-size: 105px;
   font-weight: 500;
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 35%;
+  left: 13%;
 }
 .question {
   margin-bottom: 15px;

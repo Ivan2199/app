@@ -75,43 +75,8 @@
       <section>
         <div class="box2 wrap2">
           <ul>
-            <router-link
-              class="questionLink"
-              :to="{ name: 'UvoduPrvuPomocPitanja' }"
-              ><li>Uvod u prvu pomoć</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'PostupaksUnesrecenomOsobomPitanja' }"
-              ><li>Postupak s unesrećenom osobom</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'GubitakSvijestiPitanja' }"
-              ><li>Gubitak svijesti</li></router-link
-            >
-            <router-link class="questionLink" :to="{ name: 'KrvarenjePitanja' }"
-              ><li>Krvarenje</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'OzljedeiRanePitanja' }"
-              ><li>Ozljede i rane</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'OzljedeKostijuiZglobovaPitanja' }"
-              ><li>Ozljede kostiju i zglobova</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'AkcidentalnaStanjaPitanja' }"
-              ><li>Akcidentalna stanja</li></router-link
-            >
-            <router-link
-              class="questionLink"
-              :to="{ name: 'NagloNastupajucaStanjaPitanja' }"
-              ><li>Naglo nastupajuća stanja</li></router-link
+            <router-link class="questionLink" :to="{ name: 'PrvaPomocPitanja' }"
+              ><li>Prva pomoć</li></router-link
             >
           </ul>
         </div>

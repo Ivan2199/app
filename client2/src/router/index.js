@@ -27,14 +27,7 @@ import VozilouFunkcijiSigurnostiPrometa from '../views/TheoryPageComponents/Vozi
 import PrometnaPravila from '../views/TheoryPageComponents/PrometnaPravila.vue'
 import UocavanjePrometnihUvjetaiSituacija from '../views/TheoryPageComponents/UocavanjePrometnihUvjetaiSituacija.vue'
 // prvapomoc
-import NagloNastupajucaStanja from '../views/TheoryPageComponents/PrvaPomoć.vue/NagloNastupajucaStanja.vue'
-import OzljedeKostijuiZglobova from '../views/TheoryPageComponents/PrvaPomoć.vue/OzljedeKostijuiZglobova.vue'
-import AkcidentalnaStanja from '../views/TheoryPageComponents/PrvaPomoć.vue/AkcidentalnaStanja.vue'
-import OzljedeiRane from '../views/TheoryPageComponents/PrvaPomoć.vue/OzljedeiRane.vue'
-import KrvarenjeStranica from '../views/TheoryPageComponents/PrvaPomoć.vue/KrvarenjeStranica.vue'
-import GubitakSvijesti from '../views/TheoryPageComponents/PrvaPomoć.vue/GubitakSvijesti.vue'
-import PostupaksUnesrecenomOsobom from '../views/TheoryPageComponents/PrvaPomoć.vue/PostupaksUnesrecenomOsobom.vue'
-import UvoduPrvuPomoc from '../views/TheoryPageComponents/PrvaPomoć.vue/UvoduPrvuPomoc.vue'
+import PrvaPomoc from '../views/TheoryPageComponents/PrvaPomoć/PrvaPomoc.vue'
 
 import QuestionPage from '../views/QuestionsPage.vue'
 import PropisiuCestovnomPrometuPitanja from '../views/QuestionPageComponents/PropisiuCestovnomPrometuPitanja.vue'
@@ -50,23 +43,13 @@ import VoznjaIzvanNaseljaPitanja from '../views/QuestionPageComponents/VoznjaIzv
 import PostupakuSlucajuPrometneNesrecePitanja from '../views/QuestionPageComponents/PostupakuSlucajuPrometneNesrecePitanja.vue'
 import VoznjauPosebnimUvjetimaPitanja from '../views/QuestionPageComponents/VoznjauPosebnimUvjetimaPitanja.vue'
 //prvapomoc
-import UvoduPrvuPomocPitanja from '../views/QuestionPageComponents/PrvaPomoc/UvoduPrvuPomocPitanja.vue'
-import PostupaksUnesrecenomOsobomPitanja from '../views/QuestionPageComponents/PrvaPomoc/PostupaksUnesrecenomOsobomPitanja.vue'
-import GubitakSvijestiPitanja from '../views/QuestionPageComponents/PrvaPomoc/GubitakSvijestiPitanja.vue'
-import KrvarenjePitanja from '../views/QuestionPageComponents/PrvaPomoc/KrvarenjePitanja.vue'
-import OzljedeiRanePitanja from '../views/QuestionPageComponents/PrvaPomoc/OzljedeiRanePitanja.vue'
-import OzljedeKostijuiZglobovaPitanja from '../views/QuestionPageComponents/PrvaPomoc/OzljedeKostijuiZglobovaPitanja.vue'
-import AkcidentalnaStanjaPitanja from '../views/QuestionPageComponents/PrvaPomoc/AkcidentalnaStanjaPitanja.vue'
-import NagloNastupajucaStanjaPitanja from '../views/QuestionPageComponents/PrvaPomoc/NagloNastupajucaStanjaPitanja.vue'
+import PrvaPomocPitanja from '../views/QuestionPageComponents/PrvaPomoc/PrvaPomocPitanja.vue'
 
 import QuizPage from '../views/QuizPage.vue'
 import FirstQuiz from '../views/QuizPageComponents/FirstQuiz.vue'
 import SecondQuiz from '../views/QuizPageComponents/SecondQuiz.vue'
 import ThirdQuiz from '../views/QuizPageComponents/ThirdQuiz.vue'
 import FourthQuiz from '../views/QuizPageComponents/FourthQuiz.vue'
-import FifthQuiz from '../views/QuizPageComponents/FifthQuiz.vue'
-import SixthQuiz from '../views/QuizPageComponents/SixthQuiz.vue'
-import SeventhQuiz from '../views/QuizPageComponents/SeventhQuiz.vue'
 
 Vue.use(VueRouter)
 
@@ -162,44 +145,9 @@ const routes = [
     component: UocavanjePrometnihUvjetaiSituacija
   },
   {
-    path: '/NagloNastupajucaStanja',
-    name: 'NagloNastupajucaStanja',
-    component: NagloNastupajucaStanja
-  },
-  {
-    path: '/OzljedeKostijuiZglobova',
-    name: 'OzljedeKostijuiZglobova',
-    component: OzljedeKostijuiZglobova
-  },
-  {
-    path: '/AkcidentalnaStanja',
-    name: 'AkcidentalnaStanja',
-    component: AkcidentalnaStanja
-  },
-  {
-    path: '/OzljedeiRane',
-    name: 'OzljedeiRane',
-    component: OzljedeiRane
-  },
-  {
-    path: '/KrvarenjeStranica',
-    name: 'KrvarenjeStranica',
-    component: KrvarenjeStranica
-  },
-  {
-    path: '/GubitakSvijesti',
-    name: 'GubitakSvijesti',
-    component: GubitakSvijesti
-  },
-  {
-    path: '/PostupaksUnesrecenomOsobom',
-    name: 'PostupaksUnesrecenomOsobom',
-    component: PostupaksUnesrecenomOsobom
-  },
-  {
-    path: '/UvoduPrvuPomoc',
-    name: 'UvoduPrvuPomoc',
-    component: UvoduPrvuPomoc
+    path: '/PrvaPomoc',
+    name: 'PrvaPomoc',
+    component: PrvaPomoc
   },
 
   {
@@ -221,11 +169,6 @@ const routes = [
     path: '/PonasanjeSudionikauPrometuPitanja',
     name: 'PonasanjeSudionikauPrometuPitanja',
     component: PonasanjeSudionikauPrometuPitanja
-  },
-  {
-    path: '/QuestionPage',
-    name: 'QuestionPage',
-    component: QuestionPage
   },
   {
     path: '/ZnakoviuPrometuPitanja',
@@ -273,46 +216,10 @@ const routes = [
     component: VoznjauPosebnimUvjetimaPitanja
   },
   {
-    path: '/UvoduPrvuPomocPitanja',
-    name: 'UvoduPrvuPomocPitanja',
-    component: UvoduPrvuPomocPitanja
+    path: '/PrvaPomocPitanja',
+    name: 'PrvaPomocPitanja',
+    component: PrvaPomocPitanja
   },
-  {
-    path: '/PostupaksUnesrecenomOsobomPitanja',
-    name: 'PostupaksUnesrecenomOsobomPitanja',
-    component: PostupaksUnesrecenomOsobomPitanja
-  },
-  {
-    path: '/GubitakSvijestiPitanja',
-    name: 'GubitakSvijestiPitanja',
-    component: GubitakSvijestiPitanja
-  },
-  {
-    path: '/KrvarenjePitanja',
-    name: 'KrvarenjePitanja',
-    component: KrvarenjePitanja
-  },
-  {
-    path: '/OzljedeiRanePitanja',
-    name: 'OzljedeiRanePitanja',
-    component: OzljedeiRanePitanja
-  },
-  {
-    path: '/OzljedeKostijuiZglobovaPitanja',
-    name: 'OzljedeKostijuiZglobovaPitanja',
-    component: OzljedeKostijuiZglobovaPitanja
-  },
-  {
-    path: '/AkcidentalnaStanjaPitanja',
-    name: 'AkcidentalnaStanjaPitanja',
-    component: AkcidentalnaStanjaPitanja
-  },
-  {
-    path: '/NagloNastupajucaStanjaPitanja',
-    name: 'NagloNastupajucaStanjaPitanja',
-    component: NagloNastupajucaStanjaPitanja
-  },
-
   {
     path: '/QuizPage',
     name: 'QuizPage',
@@ -337,21 +244,6 @@ const routes = [
     path: '/FourthQuiz',
     name: 'FourthQuiz',
     component: FourthQuiz
-  },
-  {
-    path: '/FifthQuiz',
-    name: 'FifthQuiz',
-    component: FifthQuiz
-  },
-  {
-    path: '/SixthQuiz',
-    name: 'SixthQuiz',
-    component: SixthQuiz
-  },
-  {
-    path: '/SeventhQuiz',
-    name: 'SeventhQuiz',
-    component: SeventhQuiz
   },
   {
     path: '/RoadSign',

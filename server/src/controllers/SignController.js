@@ -1,10 +1,12 @@
 const { Sign } = require("../models");
 
+const { addSign } = require("../services/SignService");
+
 const allowedCategories = {
-  PropisiuCestovnomPrometu: "PropisiuCestovnomPrometu",
-  CestaiNjenaObiljezja: "CestaiNjenaObiljezja",
-  PonasanjeSudionikauPrometu: "PonasanjeSudionikauPrometu",
-  RoadSigns: "RoadSigns",
+  ZnakovizaVodenjePrometa: "ZnakovizaVodenjePrometa",
+  ZnakoviObavijesti: "ZnakoviObavijesti",
+  ZnakoviIzricitihNaredbi: "ZnakoviIzricitihNaredbi",
+  ZnakoviOpasnosti: "ZnakoviOpasnosti",
 };
 
 module.exports = {
@@ -19,7 +21,7 @@ module.exports = {
         .status(400)
         .json({ message: `You have sent a non-allowed category: ${category}` });
     }
-    const sign = await Sign.create({ id, imageUrl, title, text, category });
+    const sign = await addSign({ id, imageUrl, title, text, category });
 
     return res.status(201).json(sign);
   },

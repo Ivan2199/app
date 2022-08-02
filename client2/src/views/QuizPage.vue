@@ -41,36 +41,6 @@
           >
         </div>
       </div>
-
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h2>{{ quiz5.title }}</h2>
-          <router-link class="quiz" :to="{ name: 'FifthQuiz' }"
-            >Kreni</router-link
-          >
-        </div>
-      </div>
-
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h2>{{ quiz6.title }}</h2>
-          <router-link class="quiz" :to="{ name: 'SixthQuiz' }"
-            >Kreni</router-link
-          >
-        </div>
-      </div>
-
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h2>{{ quiz7.title }}</h2>
-          <router-link class="quiz" :to="{ name: 'SeventhQuiz' }"
-            >Kreni</router-link
-          >
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -106,18 +76,6 @@ export default {
     axios
       .get('http://localhost:8081/quiz/4')
       .then((response) => (this.quiz4 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/quiz/5')
-      .then((response) => (this.quiz5 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/quiz/6')
-      .then((response) => (this.quiz6 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/quiz/7')
-      .then((response) => (this.quiz7 = response.data))
       .catch((error) => console.log(error))
   }
 }
@@ -209,25 +167,12 @@ h1 {
 
 .container .box:nth-child(3)::before,
 .container .box:nth-child(3)::after {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
 }
 
 .container .box:nth-child(4)::before,
 .container .box:nth-child(4)::after {
   background: linear-gradient(315deg, #4dff03, #00d0ff);
-}
-.container .box:nth-child(5)::before,
-.container .box:nth-child(5)::after {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
-}
-.container .box:nth-child(6)::before,
-.container .box:nth-child(6)::after {
-  background: linear-gradient(315deg, #4dff03, #00d0ff);
-}
-
-.container .box:nth-child(7)::before,
-.container .box:nth-child(7)::after {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
 }
 
 .container .box span {

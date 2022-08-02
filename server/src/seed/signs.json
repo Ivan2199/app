@@ -1,0 +1,771 @@
+[
+    {
+        "imageUrl": "https://i.imgur.com/4udksTO.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Opasnost na cesti",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/4GDkRjr.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Raskrižje cesta iste važnosti",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/FSxTELu.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Raskrižje sa sporednom cestom pod pravim kutom",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/IWuhLtp.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Spajanje sporedne ceste sa lijeve strane pod pravim kutom",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Hwa4w8a.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Spajanje sporedne ceste pod pravim kutom s desne strane",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/hzAZKZ1.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Spajanje sporedne ceste pod oštrim kutom s lijeve strane",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Ovkegug.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Spajanje sporedne ceste pod oštrim kutom s desne strane",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/E3ILwNq.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Zavoj ulijevo",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/iq6mZ6Q.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Zavoj udesno",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Vhdax8c.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Dvostruki zavoj ili više uzastopnih zavoja od kojih je prvi ulijevo",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/EwgyZM7.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Dvostruki zavoj ili više uzastopnih zavoja od kojih je prvi udesno",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/oSJIoeu.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Opasna nizbrdica",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/807TC5e.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Opasna uzbrdica",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/TZReMuy.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Suženje ceste s desne strane",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Qp1pnca.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Suženje ceste s lijeve strane",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/faHiYOr.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Neravan kolnik",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/dwvSnvZ.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Neravan kolnik",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/zxKUTHt.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Sklizak kolnik",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/xOan2Gd.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Kamenje pršti",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/fINGvrd.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Kamenje pada",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/399ZqGZ.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Nailazak na prometna svjetla",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/qsVje7B.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Nailazak na prometna svjetla",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/AFDMV9K.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Promet u oba smjera",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/MQ0Pil4.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Poledica",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/atID1sZ.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Prevrtanje ili iskliznuće vozila",
+        "category": "ZnakoviOpasnosti"
+    },
+
+
+    {
+        "imageUrl": "https://i.imgur.com/a7jirud.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Kolona vozila",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/kaes0PH.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Neutvrđena bankina",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/I9BXYkb.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Pješaci na cesti",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/JC7revx.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Obilježen pješački prelaz",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/SznJQvN.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Djeca na cesti",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/DSBOVaP.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Blizina zrakoplovne piste",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/kPTGRTk.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Tunel",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/czmkGS7.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Bočni vjetar",
+        "category": "ZnakoviOpasnosti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/y7EL3KV.jpg",
+        "title": "Znakovi opasnosti",
+        "text": "Opasnost od požara",
+        "category": "ZnakoviOpasnosti"
+    },
+
+
+
+
+
+
+
+
+    {
+        "imageUrl": "https://i.imgur.com/xypcgjU.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Raskrižje s cestom koja ima prednost prolaza",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/EV0LlzZ.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Obvezno zaustavljanje",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+
+    {
+        "imageUrl": "https://i.imgur.com/RBaDgD3.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa u oba smjera",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+
+    {
+        "imageUrl": "https://i.imgur.com/rgpUY4S.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa u jednom smjeru",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/NeXMWw1.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za sva motorna vozila osim za motocikle bez prikolice i mopede",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Qk6hDod.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za autobuse",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/4ZLAUJ4.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za teretne automobile",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/h5vc0Cm.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za cisterne",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/NrGrlxg.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila koja prevoze eksploziv ili neke lakozapaljive tvari",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/a55xZAg.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila koja prevoze opasne tvari",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Y1sq0vO.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za sva motorna vozila koja vuku priključno vozilo",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/id0QzlO.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za teretni automobil koji vuče priključno vozilo",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/L4SypWt.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za traktore",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/CCSmnOU.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za motocikle",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/9OIdgWN.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za mopede",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Z2h0EJ4.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za bicikle",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/OJADOMq.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za mopede i bicikle",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/hCkwzvB.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za zaprežna vozila",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Wd9zdLp.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za ručna kolica",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/RkbJhu3.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za sva motorna vozila",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/GtV999T.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za pješake",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/gRitS1o.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila čija ukupna širina prelazi određenu širinu",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/wVNhpai.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila čija ukupna visina prelazi odeđenu visinu",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/trHXY23.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila čija ukupna masa prelazi određenu masu",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/0L7FDO6.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila koja prekoračuju određeno osovinsko opterećenje",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/WCpbMlo.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prometa za vozila koja prekoračuju određenu dužinu",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/OaGX0Pt.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Najmanja udaljenost između vozila",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/YnUggQT.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana skretanja ulijevo",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/IMjgyFv.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana skretanja udesno",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/HHvL7Iu.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana polukružnog okretanja",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/sv9KeMN.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Ograničenje brzine",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/BfW3ZwJ.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana pretjecanja svih motornih vozila osim motocikla bez prikolice i mopeda",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/cR948XJ.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana pretjecanja za teretne automobile",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/24DGkCJ.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prolaska bez zaustavljanja - carina",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/d1MR6dv.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prolaska bez zaustavljanja - policija",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/fSO1KDc.jpg",
+        "title": "Znakovi Izričitih Naredbi",
+        "text": "Zabrana prolaska bez zaustavljanja - cestarina",
+        "category": "ZnakoviIzricitihNaredbi"
+    },
+
+
+
+
+
+
+
+
+
+
+    {
+        "imageUrl": "https://i.imgur.com/zASkWq7.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prednost prolaska prema vozilima iz suprotnog smjera",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/M04J7Gx.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Obilježen pješački prelaz",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/0Ol9YnP.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Obilježen prijelaz biciklističke staze",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/mp37E2G.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Djeca na cesti",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/uW85aka.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Podzemni ili nadzemni pješački prelaz",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/5oMG1O2.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Cesta sa jednosmjernim prometom",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/xDBRYAk.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Cesta sa jednosmjernim prometom",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/RHEFHeh.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Cesta s prednošću prolaska",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/vb8X1O0.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak ceste s prednošću prolaska",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/zn7eZ3t.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Izbočina na cesti",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/9Spl27F.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak zabrane pretjecanja svih motornih vozila osim mopeda",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/giCd7FP.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak zabrane pretjecanja za teretne automobile",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Rros3B3.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak ograničenja brzine",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/GcMHbHb.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak najmanje dopuštene brzine",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/rfYWUag.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak zabrane davanja zvučnih signala",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/RrmVvvN.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak svih zabrana",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/0cD3WMl.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak obvezne uporabe zimske opreme",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/aClfE8G.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak bicikllističke staze",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/ZrZzxb3.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak pješačke staze",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/NfcSxM2.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak staze za jahače",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/uMgMNC9.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Zona u kojoj je ograničena brzina",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/NAcfrTx.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak zone u kojoj je ograničena brzina",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/zeylQyq.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Pješačka zona",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/55qRQ32.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak pješačke zone",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/i17Sugs.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Područje smirenog prometa",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/zfRJBTv.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak područja smirenog prometa",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/djjR4Y3.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Zona u kojoj je ograničeno trajanje parkiranja",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/aidUeaQ.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Završetak zone u kojoj je ograničeno trajanje parkiranja",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/XSDECpj.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Brzina koja se preporučuje",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/ibHFjb1.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Prestanak preporučene brzine",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/gQxFEgF.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Školska patrola",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/Mzpi6Us.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Bolnica",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/vZnsw6H.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Ustanova hitne medicinske pomoć",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/KXey9u4.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Policijska postaja",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/noNQnYF.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Parkiralište",
+        "category": "ZnakoviObavijesti"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/liOHNQR.jpg",
+        "title": "Znakovi Obavijesti",
+        "text": "Garaža",
+        "category": "ZnakoviObavijesti"
+    },
+
+
+
+
+
+
+
+
+    {
+        "imageUrl": "https://i.imgur.com/xEBObap.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokaz za izlaz s autoceste ili brze ceste s oznakom izlaza",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/RUtnIVm.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokaz za čvorište autocesta s oznakom čvorišta",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/GlV5Su4.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Raskrižje",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/lzJdPim.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Raskrižje",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/tWuqs5s.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Raskrižje kružnog oblika",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/p4EnJ51.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokazna ploča",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/XGkfvFd.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokazna ploča",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/t1tJ6Ad.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokazna ploča",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/bQy5vFM.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokaz",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/XBD8ZCE.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokaz za izlaz",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/fnPCha1.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Predputokaz za izlaz",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/6pAIuaE.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Putokazna ploča",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/yOqN0xL.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Putokaz na portalu iznad jedne prometne trake",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/GqaGwjs.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Putokaz na portalu iznad jedne prometne trake",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/b1Kpunr.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Putokaz na portalu iznad dvije prometne trake",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/nfKAXyX.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Putokaz na portalu iznad dvije prometne trake",
+        "category": "ZnakovizaVodenjePrometa"
+    },
+    {
+        "imageUrl": "https://i.imgur.com/E2nafXZ.jpg",
+        "title": "Znakovi za Vođenje Prometa",
+        "text": "Potvrda smjera",
+        "category": "ZnakovizaVodenjePrometa"
+    }
+
+]

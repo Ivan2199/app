@@ -3,7 +3,7 @@
     <div class="box">
       <span></span>
       <div class="content">
-        <h2>{{ RoadSigns1.category }}</h2>
+        <h2>Znakovi Opasnosti</h2>
         <router-link class="signs" :to="{ name: 'ZnakoviOpasnosti' }"
           >Kreni</router-link
         >
@@ -12,7 +12,7 @@
     <div class="box">
       <span></span>
       <div class="content">
-        <h2>{{ RoadSigns2.category }}</h2>
+        <h2>Znakovi Izričitih Naredbi</h2>
         <router-link class="signs" :to="{ name: 'ZnakoviIzricitihNaredbi' }"
           >Kreni</router-link
         >
@@ -21,7 +21,7 @@
     <div class="box">
       <span></span>
       <div class="content">
-        <h2>{{ RoadSigns3.category }}</h2>
+        <h2>Znakovi Obavijesti</h2>
         <router-link class="signs" :to="{ name: 'ZnakoviObavijesti' }"
           >Kreni</router-link
         >
@@ -30,7 +30,7 @@
     <div class="box">
       <span></span>
       <div class="content">
-        <h2>{{ RoadSigns4.category }}</h2>
+        <h2>Znakovi za Vođenje Prometa</h2>
         <router-link class="signs" :to="{ name: 'ZnakoviZaVodenjePrometa' }"
           >Kreni</router-link
         >
@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data() {
     return {
@@ -49,24 +48,6 @@ export default {
       RoadSigns3: null,
       RoadSigns4: null
     }
-  },
-  mounted: function () {
-    axios
-      .get('http://localhost:8081/sign/1')
-      .then((response) => (this.RoadSigns1 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/sign/2')
-      .then((response) => (this.RoadSigns2 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/sign/3')
-      .then((response) => (this.RoadSigns3 = response.data))
-      .catch((error) => console.log(error))
-    axios
-      .get('http://localhost:8081/sign/4')
-      .then((response) => (this.RoadSigns4 = response.data))
-      .catch((error) => console.log(error))
   }
 }
 </script>
